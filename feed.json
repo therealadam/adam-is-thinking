@@ -7,6 +7,30 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2025/05/28/on-one-hand-theres-the.html",
+				
+				"content_html": "<p>On one hand, there’s the classical music <a href=\"https://en.wikipedia.org/wiki/Catalogues_of_classical_compositions?wprov=sfti1\">catalog</a> mode of blogging. This is a bookmark, that’s a note, a photo here, a link there, an essay when I’m feeling ambitious. Étude, sonata, variations on a theme. Framing the writing by its scale and shape. A taxonomist’s delight.</p>\n<p>Then there’s the Jack White sort of blogging: <a href=\"https://youtu.be/r_F7aiOvdwE?si=hlL3nO2YtujN5G5O\">here’s a thing, I made it</a>. The edges weren’t worked down too much, the roughness is still there. It preserves the energy and spirit of the idea more than it tries to explore the idea to its logical end. Better to cut ideas too soon than coddle them.</p>\n<p>Both work! <a href=\"https://therealadam.com/2025/05/09/the-web-and-blogs-are.html\">Blogging is a big, weird tent</a>.</p>\n",
+				"content_text": "On one hand, there’s the classical music [catalog](https://en.wikipedia.org/wiki/Catalogues_of_classical_compositions?wprov=sfti1) mode of blogging. This is a bookmark, that’s a note, a photo here, a link there, an essay when I’m feeling ambitious. Étude, sonata, variations on a theme. Framing the writing by its scale and shape. A taxonomist’s delight.\n\nThen there’s the Jack White sort of blogging: [here’s a thing, I made it](https://youtu.be/r_F7aiOvdwE?si=hlL3nO2YtujN5G5O). The edges weren’t worked down too much, the roughness is still there. It preserves the energy and spirit of the idea more than it tries to explore the idea to its logical end. Better to cut ideas too soon than coddle them.\n\nBoth work! [Blogging is a big, weird tent](https://therealadam.com/2025/05/09/the-web-and-blogs-are.html).\n\n",
+				"date_published": "2025-05-28T11:18:11-07:00",
+				"url": "https://therealadam.com/2025/05/28/on-one-hand-theres-the.html"
+			},
+			{
+				"id": "http://therealadam-ng.micro.blog/2025/05/26/i-miss-writing-do-not.html",
+				
+				"content_html": "<p>I miss writing “DO NOT ERASE” on whiteboards when a collaborator and I finally succeed at capturing the mental or visual model of a problem or its solution.</p>\n<p>It’s like writing “a good thing happened here today” on the whiteboard.</p>\n<p>Close second place: the act of crossing an item off your to-do list, particularly one on paper.</p>\n",
+				"content_text": "I miss writing “DO NOT ERASE” on whiteboards when a collaborator and I finally succeed at capturing the mental or visual model of a problem or its solution.\n\nIt’s like writing “a good thing happened here today” on the whiteboard. \n\nClose second place: the act of crossing an item off your to-do list, particularly one on paper.\n\n",
+				"date_published": "2025-05-26T09:41:13-07:00",
+				"url": "https://therealadam.com/2025/05/26/i-miss-writing-do-not.html"
+			},
+			{
+				"id": "http://therealadam-ng.micro.blog/2025/05/23/whats-a-highlevel-language-is.html",
+				
+				"content_html": "<p>What’s a high-level language? Is it Java, Go, and C#? Or is it Ruby, JavaScript, or Python? Where does Swift go?</p>\n<p>It’s all a matter of perspective. To a kernel developer who thinks about bytes on a wire or spinning a disk to read a file, <code>git</code> is incredibly high-level. 🙃 To a Smalltalk developer, files on disk are low-level (I assume).</p>\n<p>Anyone telling you otherwise, including past or future Adams, is making a <a href=\"https://en.wikipedia.org/wiki/No_true_Scotsman\">no true Scotsman</a> argument.</p>\n",
+				"content_text": "What’s a high-level language? Is it Java, Go, and C#? Or is it Ruby, JavaScript, or Python? Where does Swift go?\n\nIt’s all a matter of perspective. To a kernel developer who thinks about bytes on a wire or spinning a disk to read a file, `git` is incredibly high-level. 🙃 To a Smalltalk developer, files on disk are low-level (I assume).\n\nAnyone telling you otherwise, including past or future Adams, is making a [no true Scotsman](https://en.wikipedia.org/wiki/No_true_Scotsman) argument.\n\n",
+				"date_published": "2025-05-23T09:21:45-07:00",
+				"url": "https://therealadam.com/2025/05/23/whats-a-highlevel-language-is.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2025/05/22/currently-watching-the-second-and.html",
 				
 				"content_html": "<p>📺Currently watching:</p>\n<ul>\n<li>The second (and final) season of <em>Andor</em> was spectacular. The best Star War of the past ten years, IMO.</li>\n<li>S3 and S4 of <em>Slow Horses</em> continue to delight. Capable but slovenly Gary Oldman is a great character.</li>\n<li>I’m surprised how much I look forward to <em>The Studio</em> every week. Highly recommended, even if Seth Rogen isn’t your thing.</li>\n<li>S4 of <em>Hacks</em> plays up tension between the leads more than I’d like. Otherwise, the writing and performances are excellent.</li>\n<li>Reserving judgement on S1 of <em>Murderbot</em>. The first episode did not grab me, but the second was an improvement.</li>\n<li>Upcoming: Not sure how I feel about <em>The Bear</em>. But, my feelings won’t change how award shows go, so maybe I should just go with it. 🤷🏻‍♂️</li>\n</ul>\n",
