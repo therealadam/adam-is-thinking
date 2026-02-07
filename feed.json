@@ -7,10 +7,18 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/02/07/i-went-to-see-an.html",
+				
+				"content_html": "<p>I went to see an <!-- raw HTML omitted -->elephant<!-- raw HTML omitted --> about a birthday.</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "I went to see an <a href=\"https://www.oregonzoo.org/tula-tus-first-year\">elephant</a> about a birthday.\n\n<img src=\"uploads/2026/img-4460-edited.jpg\" alt=\"IMG_4460 Edited.\" width=\"600\" height=\"190\" />\n",
+				"date_published": "2026-02-07T12:54:57-08:00",
+				"url": "https://therealadam.com/2026/02/07/i-went-to-see-an.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/02/04/dave-rupert-write-about-the.html",
 				
-				"content_html": "<p>Dave Rupert, <a href=\"https://daverupert.com/2026/02/futurescapes/\">Write about the future you want</a></p>\n<blockquote>\n<p>There’s a lot that’s not going well; politics, tech bubbles, the economy, and so on. I spend most of my day reading angry tweets and blog posts. There’s a lot to be upset about, so that’s understandable. But in the interest of fostering better discourse, I’d like to offer a challenge that I think the world desperately needs right now: It’s cheap and easy to complain and say “[Thing] is bad”, but it’s also free to share what you think would be better.</p>\n</blockquote>\n<p>Co-signed.</p>\n",
-				"content_text": "Dave Rupert, [Write about the future you want](https://daverupert.com/2026/02/futurescapes/)\n\n> There’s a lot that’s not going well; politics, tech bubbles, the economy, and so on. I spend most of my day reading angry tweets and blog posts. There’s a lot to be upset about, so that’s understandable. But in the interest of fostering better discourse, I’d like to offer a challenge that I think the world desperately needs right now: It’s cheap and easy to complain and say “[Thing] is bad”, but it’s also free to share what you think would be better.\n\nCo-signed.\n",
+				"content_html": "<p>Dave Rupert, <a href=\"https://daverupert.com/2026/02/futurescapes/\">Write about the future you want</a>:</p>\n<blockquote>\n<p>There’s a lot that’s not going well; politics, tech bubbles, the economy, and so on. I spend most of my day reading angry tweets and blog posts. There’s a lot to be upset about, so that’s understandable. But in the interest of fostering better discourse, I’d like to offer a challenge that I think the world desperately needs right now: It’s cheap and easy to complain and say “[Thing] is bad”, but it’s also free to share what you think would be better.</p>\n</blockquote>\n<p>Co-signed.</p>\n",
+				"content_text": "Dave Rupert, [Write about the future you want](https://daverupert.com/2026/02/futurescapes/):\n\n> There’s a lot that’s not going well; politics, tech bubbles, the economy, and so on. I spend most of my day reading angry tweets and blog posts. There’s a lot to be upset about, so that’s understandable. But in the interest of fostering better discourse, I’d like to offer a challenge that I think the world desperately needs right now: It’s cheap and easy to complain and say “[Thing] is bad”, but it’s also free to share what you think would be better.\n\nCo-signed.\n",
 				"date_published": "2026-02-04T18:51:15-08:00",
 				"url": "https://therealadam.com/2026/02/04/dave-rupert-write-about-the.html",
 				"tags": ["Links"]
