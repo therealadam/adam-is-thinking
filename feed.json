@@ -7,6 +7,14 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/05/06/madrid-day.html",
+				
+				"content_html": "<p>Madrid, day 2</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
+				"content_text": "Madrid, day 2\n\n<img src=\"uploads/2026/f1a274a390d94eaa857e14f6feec9e42.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"uploads/2026/1fb32329957a48a492c0db2e3d033ae8.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"uploads/2026/262fbace22224a7b8e792b4d1d193b31.jpg\" width=\"600\" height=\"400\" alt=\"\"><img src=\"uploads/2026/697eda339e95458583a5e3c8720ce1f8.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"date_published": "2026-05-06T08:43:23-07:00",
+				"url": "https://therealadam.com/2026/05/06/madrid-day.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/05/05/071648.html",
 				
 				"content_html": "<!-- raw HTML omitted -->\n",
