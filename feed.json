@@ -7,6 +7,14 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/05/19/madridbarajas-and-heathrow-day.html",
+				
+				"content_html": "<p>Madrid–Barajas and Heathrow, day 10.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
+				"content_text": "Madrid–Barajas and Heathrow, day 10.\n\n<img src=\"uploads/2026/b53f955dd3.jpg\" width=\"400\" height=\"600\" alt=\"\"><img src=\"uploads/2026/1940caf073.jpg\" width=\"400\" height=\"600\" alt=\"\">\n",
+				"date_published": "2026-05-19T18:26:58-07:00",
+				"url": "https://therealadam.com/2026/05/19/madridbarajas-and-heathrow-day.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/05/18/madrid-day.html",
 				
 				"content_html": "<p>Madrid, day 9.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
@@ -42,7 +50,7 @@
 				"id": "http://therealadam-ng.micro.blog/2026/05/10/madrid-day.html",
 				
 				"content_html": "<p>Madrid, day 5.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "Madrid, day 5.\n\n<img src=\"uploads/2026/0ca0dbaacece480da1de5a346909669f.jpg\" width=\"600\" height=\"449\" alt=\"\"><img src=\"uploads/2026/804de7a5f4414766ba774c63e95ab99b.jpg\" width=\"449\" height=\"600\" alt=\"\"><img src=\"uploads/2026/37d9c2f7f84c4357be455de6c457b552.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2026/0d41f7708272487d9aafafd5519a4d85.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "Madrid, day 5.\n\n<img src=\"https://cdn.uploads.micro.blog/151691/2026/0ca0dbaacece480da1de5a346909669f.jpg\" width=\"600\" height=\"449\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/151691/2026/804de7a5f4414766ba774c63e95ab99b.jpg\" width=\"449\" height=\"600\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/151691/2026/37d9c2f7f84c4357be455de6c457b552.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/151691/2026/0d41f7708272487d9aafafd5519a4d85.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2026-05-10T01:18:52-07:00",
 				"url": "https://therealadam.com/2026/05/10/madrid-day.html"
 			},
@@ -50,7 +58,7 @@
 				"id": "http://therealadam-ng.micro.blog/2026/05/09/madrid-day-museo-prado-not.html",
 				
 				"content_html": "<p>Madrid, day 4. Museo Prado not pictured at the request of the Museo Prado.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "Madrid, day 4. Museo Prado not pictured at the request of the Museo Prado.\n\n<img src=\"uploads/2026/9018ce2c51f344a3a9a989099ae6da42.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2026/29a9209494c24476b006bfe65e5283a8.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "Madrid, day 4. Museo Prado not pictured at the request of the Museo Prado.\n\n<img src=\"https://cdn.uploads.micro.blog/151691/2026/9018ce2c51f344a3a9a989099ae6da42.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/151691/2026/29a9209494c24476b006bfe65e5283a8.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2026-05-09T12:55:19+02:00",
 				"url": "https://therealadam.com/2026/05/09/madrid-day-museo-prado-not.html"
 			},
@@ -59,7 +67,7 @@
 				
 				"content_html": "<p>Madrid, day 3. Sometimes, you gotta sleep in and take a short bus tour.</p>\n<!-- raw HTML omitted -->\n",
 				"content_text": "Madrid, day 3. Sometimes, you gotta sleep in and take a short bus tour.\n\n<img src=\"https://cdn.uploads.micro.blog/151691/2026/2cce35e34b3c4932a60740c7de7273b7.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
-				"date_published": "2026-05-09T12:50:56+02:00",
+				"date_published": "2026-05-09T03:50:56-07:00",
 				"url": "https://therealadam.com/2026/05/09/madrid-day-sometimes-you-gotta.html"
 			},
 			{
@@ -74,7 +82,7 @@
 				"id": "http://therealadam-ng.micro.blog/2026/05/05/071648.html",
 				
 				"content_html": "<p>Madrid, day 1\n<!-- raw HTML omitted --></p>\n",
-				"content_text": "Madrid, day 1\n<img src=\"uploads/2026/ad9394ff41.jpg\" width=\"400\" height=\"600\" alt=\"\">\n",
+				"content_text": "Madrid, day 1\n<img src=\"https://cdn.uploads.micro.blog/151691/2026/ad9394ff41.jpg\" width=\"400\" height=\"600\" alt=\"\">\n",
 				"date_published": "2026-05-05T07:16:48-07:00",
 				"url": "https://therealadam.com/2026/05/05/071648.html"
 			},
