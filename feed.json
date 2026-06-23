@@ -7,6 +7,22 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/06/22/human-touch-is-the-phil.html",
+				
+				"content_html": "<p>🎧_Human Touch_ is the Phil Collins-est of Bruce Springsteen albums. From one <a href=\"https://www.youtube.com/watch?v=oRT_qsHgBiQ\">Oscar winner</a> of the 1990s to <a href=\"https://www.youtube.com/watch?v=362SVFvDuYk\">another</a>.</p>\n",
+				"content_text": "🎧_Human Touch_ is the Phil Collins-est of Bruce Springsteen albums. From one [Oscar winner](https://www.youtube.com/watch?v=oRT_qsHgBiQ) of the 1990s to [another](https://www.youtube.com/watch?v=362SVFvDuYk).\n",
+				"date_published": "2026-06-22T17:54:32-07:00",
+				"url": "https://therealadam.com/2026/06/22/human-touch-is-the-phil.html"
+			},
+			{
+				"id": "http://therealadam-ng.micro.blog/2026/06/21/finished-in-a-narrow-grave.html",
+				
+				"content_html": "<!-- raw HTML omitted -->\n<p>📚 Finished: <a href=\"https://micro.blog/books/9781631493546\">In a Narrow Grave</a> by Larry McMurtry. If you’ve ever lived in Texas, even more so if you’re from Texas, this is a great read. It’s not quite Texas as I remember it, as the author was writing a decade or two before my time. But it captures the spirit and backstory of 20th century Texas. Contains great explainers on the rivalries between Austin, Dallas, and Houston. And, that Texas is at least two different things: east Texas, west Texas, and probably south Texas.</p>\n<p>The nostalgia was strong as I read this. But, the headlines bear many reminders that the religious right and culture warriors have thoroughly captured and corrupted the state. I hope those who’ve stuck around can recover it, someday.</p>\n",
+				"content_text": "<img src=\"https://cdn.micro.blog/books/9781631493546/cover.jpg\" align=\"left\" class=\"microblog_book\" style=\"max-width: 60px; margin-right: 20px; margin-top: 0px; padding-top: 0px;\">\n\n📚 Finished: [In a Narrow Grave](https://micro.blog/books/9781631493546) by Larry McMurtry. If you’ve ever lived in Texas, even more so if you’re from Texas, this is a great read. It’s not quite Texas as I remember it, as the author was writing a decade or two before my time. But it captures the spirit and backstory of 20th century Texas. Contains great explainers on the rivalries between Austin, Dallas, and Houston. And, that Texas is at least two different things: east Texas, west Texas, and probably south Texas. \n\nThe nostalgia was strong as I read this. But, the headlines bear many reminders that the religious right and culture warriors have thoroughly captured and corrupted the state. I hope those who’ve stuck around can recover it, someday.\n",
+				"date_published": "2026-06-21T12:28:07-07:00",
+				"url": "https://therealadam.com/2026/06/21/finished-in-a-narrow-grave.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/06/18/the-local-maxima-we-need.html",
 				"title": "The local maxima we need to reach the next global maximum",
 				"content_html": "<p>Half-way through 2026, I’m finally getting around to posting some predictions for the year. Really, ideas about how software development can fix the house to deal with coding agents generating <em>lots</em> of code:</p>\n<ul>\n<li>Design with pacing, stable/unstable layers – ala <a href=\"https://en.wikipedia.org/wiki/Shearing_layers\">Shearing layers</a></li>\n<li>Correctness by design/assertion – ala <a href=\"https://www.youtube.com/watch?v=IcgmSRJHu_8\">&ldquo;Making Impossible States Impossible&rdquo;</a></li>\n<li>Formal verification (finally) – figure out if we can do better than compilers and unit tests to know if what we asked for resembles what we received</li>\n<li>Even more deterministic static analysis – absent a leap forward in the practicality and ergonomics of formal verification, can we manage the flood plain of incoming code with beaver dams of linters, style checkers, and good old-fashioned <code>grep</code>?</li>\n<li>Improve our observability stance – how can we see the emergent properties of the running system, let alone iterate on them? And, can we do so without spending all our lunch money on observability services and stacks?</li>\n</ul>\n<p>Notably absent from this list: guardrails, specs, swarms, optimization, maximalism, orchestration. These aren’t even local maxima, they’re just shiny objects or shovels someone is trying to sell us along the way.</p>\n",
