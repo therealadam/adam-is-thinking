@@ -7,10 +7,18 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/06/23/you-aint-got-time-for.html",
+				
+				"content_html": "<p><a href=\"https://buttondown.com/therealadam/archive/you-ain-t-got-time-for-all-this/\">You ain’t got time for all this</a> – the latest newsletter edition from yours truly. Some recent, remixed. Some all new links. If you&rsquo;re seeing this on your computer screen, you might like it!</p>\n",
+				"content_text": "[You ain’t got time for all this](https://buttondown.com/therealadam/archive/you-ain-t-got-time-for-all-this/) – the latest newsletter edition from yours truly. Some recent, remixed. Some all new links. If you're seeing this on your computer screen, you might like it!\n",
+				"date_published": "2026-06-23T18:19:25-07:00",
+				"url": "https://therealadam.com/2026/06/23/you-aint-got-time-for.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/06/22/human-touch-is-the-phil.html",
 				
-				"content_html": "<p>🎧_Human Touch_ is the Phil Collins-est of Bruce Springsteen albums. From one <a href=\"https://www.youtube.com/watch?v=oRT_qsHgBiQ\">Oscar winner</a> of the 1990s to <a href=\"https://www.youtube.com/watch?v=362SVFvDuYk\">another</a>.</p>\n",
-				"content_text": "🎧_Human Touch_ is the Phil Collins-est of Bruce Springsteen albums. From one [Oscar winner](https://www.youtube.com/watch?v=oRT_qsHgBiQ) of the 1990s to [another](https://www.youtube.com/watch?v=362SVFvDuYk).\n",
+				"content_html": "<p>🎧 <em>Human Touch</em> is the Phil Collins-est of Bruce Springsteen albums. From one <a href=\"https://www.youtube.com/watch?v=oRT_qsHgBiQ\">Oscar winner</a> of the 1990s to <a href=\"https://www.youtube.com/watch?v=362SVFvDuYk\">another</a>.</p>\n",
+				"content_text": "🎧 _Human Touch_ is the Phil Collins-est of Bruce Springsteen albums. From one [Oscar winner](https://www.youtube.com/watch?v=oRT_qsHgBiQ) of the 1990s to [another](https://www.youtube.com/watch?v=362SVFvDuYk).\n",
 				"date_published": "2026-06-22T17:54:32-07:00",
 				"url": "https://therealadam.com/2026/06/22/human-touch-is-the-phil.html"
 			},
