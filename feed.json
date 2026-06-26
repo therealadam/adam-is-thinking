@@ -7,10 +7,18 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/06/26/silvermoon-brewing-and-mckay-cottage.html",
+				
+				"content_html": "<p>Silvermoon Brewing and McKay Cottage in Bend, Oregon</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
+				"content_text": "Silvermoon Brewing and McKay Cottage in Bend, Oregon\n\n<img src=\"uploads/2026/044d39684e.jpg\" width=\"600\" height=\"400\" alt=\"A black-and-white mural on a brick wall features Prince and Ozzy Osbourne\"><img src=\"uploads/2026/a9f9dbbc44.jpg\" width=\"600\" height=\"399\" alt=\"A wooden table with a dark mug of coffee, a glass of water, and a single pink flower in a small vase is set near a bright outdoor area with trees and parked cars.\">\n",
+				"date_published": "2026-06-26T16:40:36-07:00",
+				"url": "https://therealadam.com/2026/06/26/silvermoon-brewing-and-mckay-cottage.html"
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/06/23/you-aint-got-time-for.html",
 				
-				"content_html": "<p><a href=\"https://buttondown.com/therealadam/archive/you-ain-t-got-time-for-all-this/\">You ain’t got time for all this</a> – the latest newsletter edition from yours truly. Some recent, remixed. Some all new links. If you&rsquo;re seeing this on your computer screen, you might like it!</p>\n",
-				"content_text": "[You ain’t got time for all this](https://buttondown.com/therealadam/archive/you-ain-t-got-time-for-all-this/) – the latest newsletter edition from yours truly. Some recent, remixed. Some all new links. If you're seeing this on your computer screen, you might like it!\n",
+				"content_html": "<p><a href=\"https://buttondown.com/therealadam/archive/you-ain-t-got-time-for-all-this/\">You ain’t got time for all this</a> – the latest newsletter edition from yours truly. Some of my recent writing, remixed. Some all new links. If you&rsquo;re seeing this on your computer screen, you might like it!</p>\n",
+				"content_text": "[You ain’t got time for all this](https://buttondown.com/therealadam/archive/you-ain-t-got-time-for-all-this/) – the latest newsletter edition from yours truly. Some of my recent writing, remixed. Some all new links. If you're seeing this on your computer screen, you might like it!\n",
 				"date_published": "2026-06-23T18:19:25-07:00",
 				"url": "https://therealadam.com/2026/06/23/you-aint-got-time-for.html"
 			},
