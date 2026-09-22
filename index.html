@@ -2,7 +2,7 @@
 <html>
 
   <head>
-	<meta name="generator" content="Hugo 0.91.2" />
+	<meta name="generator" content="Hugo 0.158.0">
 
   <title>
       
@@ -1126,7 +1126,7 @@
 <li>In particular, instruct your coding agent to use tools like your favorite linter, formatter, running your test suite, executing the type checker, etc. to do good work. These feedback loops are crucial to prevent hallucination and let the agent run autonomously.</li>
 <li>Even more important: give instructions for how to “see” the program running. e.g. <a href="https://github.com/microsoft/playwright-mcp">Playwright MCP</a>, <a href="https://github.com/cameroncooke/XcodeBuildMCP">XcodeBuild MCP</a>, <a href="https://www.peekaboo.boo">Peekaboo</a>, are important tools here. The longer an agent run its goal-seeking loop in its own, the better. The ability to run the program it’s working on and see if it achieved its goal, without human intervention, is where the uncanny magic really happens.</li>
 </ol>
-<h2 id="delegate-the-workhttpshowtobuildwithaisubstackcompdont-delegate-thinking-delegate-work-specialize-in-thinking"><a href="https://howtobuildwithai.substack.com/p/dont-delegate-thinking-delegate-work">Delegate the work</a>, specialize in thinking</h2>
+<h2 id="delegate-the-work-specialize-in-thinking"><a href="https://howtobuildwithai.substack.com/p/dont-delegate-thinking-delegate-work">Delegate the work</a>, specialize in thinking</h2>
 <p>Things are moving quickly in this space, but I feel confident saying humans in the loop will remain a requirement for the next several months, at least.</p>
 <p>Agents forget, sometimes <em>during</em> a session. But you can solve this via <code>CLAUDE.md</code> and adding ‘memories’ to it. Or, tools and MCPs help too. There are even tools (like <a href="https://github.com/steveyegge/beads"><code>[bd]</code></a>) to explicitly outboard the agent’s memory to task lists, not unlike a human might.</p>
 <p>Helpfully, Claude Code has a <code>/context</code> command that tells you how much of your context window is in use and by what. Claude has a mechanism for compacting (think defragging your Windows 95 hard drive). When you’re running out of the context window, it’s helpful to know that is happening. These are the times you might have to remind the agent about standards and principles that were loaded way back in the beginning of the session. “Hey, don’t forget, lil friend, that we use K&amp;R style function declarations!”</p>
@@ -1463,7 +1463,7 @@
 		<a href="https://therealadam.com/2025/09/11/the-long-way-to-a.html" class="u-url"><time class="dt-published" datetime="2025-09-11 10:24:46 -0700">Sep 11, 2025</time></a>
 
 		<div class="e-content">
-			 <p>📚_The Long Way to a Small, Angry Planet_, Becky Chambers</p>
+			 <p>📚<em>The Long Way to a Small, Angry Planet</em>, Becky Chambers</p>
 <p>I’ve read three of Chambers’ books now and would characterize them as “comfy sci-fi”. In the best possible way! There’s a spaceship with many sapient species making up its crew. There are stakes and adventures, but they aren’t galactic in scale or epic in drama. It’s a nice reprieve from the cold-eyed intensity of, e.g., Herbert.</p>
 <p>This one is a “found family” sort of outing. Our crew has a few adventures, but they are secondary to the relationships and connections formed. Again, it’s an enjoyable change of pace from what I normally read. I love a hero’s journey dotted with encrypted deck-of-cards messaging and “what if computers were exceptionally competent <em>and</em> evil?” plot lines. But I think it’s good to read about relationships and “what if birds and apes were sapient and worked together in deep space?” too. 😆</p>
 
@@ -2379,22 +2379,22 @@
 </blockquote>
 <p>After you’ve dabbled a bit with vibe coding tools, there’s no better way to wrap your head around vibe coding than to build it for yourself. There’s no magic, even if you don’t know Go!</p>
 <p>If you’re handy with Ruby, you can easily compress the ideas therein down to about a hundred lines of code.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">	  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReadFile</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">RubyLLM</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Tool</span>
-	    description <span style="color:#f92672">&lt;&lt;~</span><span style="color:#66d9ef">DESC</span>
-	      <span style="color:#66d9ef">Read</span> the contents of a given relative file path<span style="color:#f92672">.</span> <span style="color:#66d9ef">Use</span> this <span style="color:#66d9ef">when</span> you want to see what<span style="color:#e6db74">&#39;s inside a file. Do not use this with directory names.
-</span><span style="color:#e6db74">	    DESC
-</span><span style="color:#e6db74">	    param :path,
-</span><span style="color:#e6db74">	          type: :string,
-</span><span style="color:#e6db74">	          required: true,
-</span><span style="color:#e6db74">	          desc: &#39;</span><span style="color:#66d9ef">The</span> relative path of a file <span style="color:#66d9ef">in</span> the working directory<span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
-	
-	    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute</span>(<span style="color:#e6db74">path</span>:)
-	      <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>read(path)
-	    <span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">StandardError</span> <span style="color:#f92672">=&gt;</span> e
-	      { <span style="color:#e6db74">error</span>: e<span style="color:#f92672">.</span>message }
-	    <span style="color:#66d9ef">end</span>
-	  <span style="color:#66d9ef">end</span>
-</code></pre></div><p><a href="https://rubyllm.com">RubyLLM</a> is a fantastic library. Nearly all the ideas in the tutorial are concise abstractions. Recommended.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>	  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReadFile</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">RubyLLM</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Tool</span>
+</span></span><span style="display:flex;"><span>	    description <span style="color:#f92672">&lt;&lt;~</span><span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span>	      <span style="color:#66d9ef">Read</span> the contents of a given relative file path<span style="color:#f92672">.</span> <span style="color:#66d9ef">Use</span> this <span style="color:#66d9ef">when</span> you want to see what<span style="color:#e6db74">&#39;s inside a file. Do not use this with directory names.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	    DESC
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	    param :path,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	          type: :string,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	          required: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	          desc: &#39;</span><span style="color:#66d9ef">The</span> relative path of a file <span style="color:#66d9ef">in</span> the working directory<span style="color:#f92672">.</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute</span>(<span style="color:#e6db74">path</span>:)
+</span></span><span style="display:flex;"><span>	      <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>read(path)
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">StandardError</span> <span style="color:#f92672">=&gt;</span> e
+</span></span><span style="display:flex;"><span>	      { <span style="color:#e6db74">error</span>: e<span style="color:#f92672">.</span>message }
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p><a href="https://rubyllm.com">RubyLLM</a> is a fantastic library. Nearly all the ideas in the tutorial are concise abstractions. Recommended.</p>
 
 		</div>
 	  </div>
@@ -3380,23 +3380,23 @@ query q:
 <p>Follow your curiosity. The very best part about building on your time as a manager is you don’t have to make great decisions. Whatever is of interest, go with it.</p>
 <p>Want to build a compiler, but you work in web apps? Go for it. Want to build a game, but you work in compilers? Go for it. Want to build an asset tracking web app in a really particular way, but you work in games? Go for it. Want to write in Haskell, but you work in Ruby? Go for it.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
 <p><strong>Go for it.</strong></p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>As always, when I say “you”, I mean “you, the reader”, which is often “my previous or future self”. 🙃&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Previously: <a href="https://therealadam.com/2022/05/16/managers-can-code.html"> Managers can code on whatever keeps them off the critical path </a>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>Don’t get yourself <em>back</em> on the critical path of projects. Your time and energy operate within different constraints now, and they’re largely incompatible with being <em>deep</em> and <em>hands-on</em> with the code.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
+<li id="fn:4">
 <p>Caveat: you are about to have a <em>lot</em> of arguments with a new nemesis, the compiler.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -3624,14 +3624,14 @@ query q:
 <p>Apple has chosen to bind a whole key, no modifiers or anything, to “convey an emotion”. A (cartoonish) picture is worth a thousand words.</p>
 <p>🧠 Smart!</p>
 <p>(I could go on for at least five minutes about Apple’s recent design advantage is in introducing big features without making them shout-y <em>in the UI</em>. Granted, the marketing is very shout-y.)</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>By default, if I recall correctly.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -3648,7 +3648,7 @@ query q:
 <p>If you’re not actively seeking a job, here’s a thing that helped me go from “well this market sucks” to “welp, job seeking is my full-time job now, the only way out is through”:</p>
 <p>I started warming up my professional network when things got spooky at my current job.</p>
 <p>Caveat, I could have done even more than I did<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Despite not taking more steps, the simple act of thinking through “what would I do if the worst happened and my job disappeared?” put me one step ahead, <em>and</em> I was a little more calm after my job <em>did</em> disappear.</p>
-<h2 id="1-the-network-is-the-work2">1. The network is the work<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></h2>
+<h2 id="1-the-network-is-the-work">1. The network is the work<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></h2>
 <p>A strong, active professional network is the most important tool in this scenario. This is true whether the job market favors job-seekers or employers.</p>
 <p>Especially when seeking a job without one in-hand, people are happy to respond and help out<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. Fifteen minutes of writing and responding to messages could kick-start the process for your next job.</p>
 <p>Some helpful questions I asked myself in contemplating how to warm my network back up:</p>
@@ -3680,42 +3680,42 @@ query q:
 <p>But there was a hump I had to get over, entirely in my head, about actively/explicitly putting myself out there. Some social barriers I had to let go of, like not “reaching out” to folks via email or LinkedIn. Doing sales-y things, it’s a big growth area for me. 🙃</p>
 <p>Finally, a thing I’m learning about this most-difficult job search of my career: every step on the job search is one step closer to finding that job.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
 <p>If you find yourself actively seeking a job, or merely feeling the spider-sense tingle about your current role, good luck! I hope this helped.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>I almost wrote this with “job-seeking is a steady state” as the thesis. I wish I had taken that idea more seriously before and hopefully I won’t let my guard all-the-way-down after I get through my current job search.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Sun Microsystems is no longer a thing. Ergo, no apologies for paraphrasing their “the network is the computer” tagline.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>Basically everyone in my network whom I’ve reached out to was happy to help me through this challenging liminal state. This is a really nice thing to experience, particularly in our often-dismal times.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
+<li id="fn:4">
 <p>I’m not certain if I would actually <em>like</em> working in finance. Maybe I’m mostly interested in learning more about that industry works, visibly and invisibly, in our lives and the world.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:5" role="doc-endnote">
+<li id="fn:5">
 <p>I’m unlikely to chance my way into Disney Imagineering, but maybe there’s something a lot <em>like</em> Imagineering within reach (of my network).🤞🏻&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:6" role="doc-endnote">
+<li id="fn:6">
 <p>I didn’t do this before the shoe(s) dropped, but I wish I had.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:7" role="doc-endnote">
+<li id="fn:7">
 <p>No more than quarterly, no less than annually, I hope!&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:8" role="doc-endnote">
+<li id="fn:8">
 <p>I’m honestly not sure why. As a hiring manager, I find the cover letter crucial information in seeing if the candidate is capable of clear, concise, easy-to-read communication.</p>
 <p>I’m going to blame applicant tracking systems and the reality that most job descriptions receive hundreds and thousands of applications. 🤷🏻‍♂️&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:9" role="doc-endnote">
+<li id="fn:9">
 <p>Advice I heard for addressing an audience with confidence when I took improv classes: walk out there and address them like you’ve already won them over. Bring the charisma and energy of someone who has <em>already</em> sealed the deal.&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:10" role="doc-endnote">
+<li id="fn:10">
 <p>I was not taken by this bit of wisdom at first. But, it’s truth enough in that taking <em>no steps</em> to seek a job gets you nowhere. In context, that’s true enough to keep in mind.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -3808,17 +3808,17 @@ query q:
 <li>Rust, in combination with LLM copilots, is easier to navigate than it was without them and I spent less time arguing with the compiler than I’d feared I would.</li>
 <li>Small, low-customization CSS libraries: they’re good for me!</li>
 </ul>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Previously: <a href="https://therealadam.com/2024/09/13/wherein-the-old.html">I learn new tricks</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>I’ve explored this a few times and come up with the same answer. I’d love to be wrong about this!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4285,7 +4285,7 @@ query q:
 <blockquote>
 <p>I never feel like I have a book in me. I always feel like there’s a book around me. It’s like I’m a planet and there’s all this space junk orbiting me, and all the junk starts smashing together and forming book chapters. My job is to grab that stuff around me and shape it into something.</p>
 </blockquote>
-<h2 id="production-is-making-_social_-connections">Production is making <em>social</em> connections</h2>
+<h2 id="production-is-making-social-connections">Production is making <em>social</em> connections</h2>
 <p>So you’ve got a <a href="https://therealadam.com/2024/07/13/journal-highlight-revisit.html">routine of journals and notes and active reading and such</a>. You’re turning those into blog posts and thinking <em>with</em> the network, right?</p>
 <p>In particular, using networked writing (hypertext, social media) as an attractor for ideas and likeminded folks. Repeatedly engaging with those folks until a <em>new</em>, boring status quo/local maximum is reached. Iterate and seek ever higher peaks.</p>
 <p>Tom Critchlow, <a href="https://tomcritchlow.com/2018/02/23/small-b-blogging/">Small b blogging</a>:</p>
@@ -4302,7 +4302,7 @@ query q:
 <blockquote>
 <p>One thing I’ve learned over time is to read fewer books but to take the time to write summaries for the good ones. The ROI of spending 2h writing a synopsis is much higher than spending those 2h powering through the next book on your list. Reading is not about page count or speed [1]. What matters is how it changes your thinking and what you take away from it. Optimize for comprehension, not volume.&quot;</p>
 </blockquote>
-<h2 id="production-is-doing-the-thing-you-cant-_not_-do-a-vocation">Production is doing the thing you can’t <em>not</em> do, a vocation</h2>
+<h2 id="production-is-doing-the-thing-you-cant-not-do-a-vocation">Production is doing the thing you can’t <em>not</em> do, a vocation</h2>
 <p>Maybe it’s writing, but it’s cool if it’s not. Putting all these ideas together yields something <em>new</em> in the world, literal creativity. That calling, no matter the ambition or profitability or fruitfulness, is different for all of us. But we can all work the skills that support that creation.</p>
 <p>Jared Henderson, <a href="https://jaredhenderson.substack.com/p/ai-wont-replace-you-unless-you-let">AI won&rsquo;t replace you, unless you let it</a>:</p>
 <blockquote>
@@ -4380,17 +4380,17 @@ query q:
 <p>✋🏻 management by walking around</p>
 <p>👉🏻 leadership by sitting down<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> and engaging with the people doing the work</p>
 <p>Even better: leadership by sustaining long period of assimilating what the team and meetings are telling you into a slightly better way of working. And sometimes, memos and slides, etc to send out and socialize ideas for you.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>The best leadership fades into the background of a larger creative act. The worst leadership throws off drama like sparks off a racecar.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p><a href="https://ruby.social/@therealadam/112321601232650591">Butts-in-chairs</a> of management: it matters!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4412,14 +4412,14 @@ query q:
 <p><code>diff</code> made source control possible, so I have to think it’s in the top 5 accelerants to software development of all time<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Let alone using <code>diff</code> or <code>patch</code> under the hood in systems to move changes around.</p>
 <p>Even the concept of diff is a big deal!</p>
 <p>Part of the superpower of being a developer is the idea that you can analyze two pieces of data with a common lineage, extract the changes, and work with/reason about the <em>changes</em> as first-class data. Were it only that more non-developer tools had this capability!</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>I have no idea how to quantify this 🤷🏻‍♂️&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4450,32 +4450,32 @@ query q:
 <li>as a way to figure out _what I think_by writing my way through it.</li>
 <li>worrying less about writing down what I already know<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></li>
 </ul>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Via an Obsidian plugin&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>This is surprisingly unique to DayOne and the reason I have several thousand entries over multiple decades&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>In case you hadn’t noticed, this format is basically my blogging “show bible”.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
+<li id="fn:4">
 <p>What an improbable sentence to write in 2024. In 2004 it would have been appropriate to question the meaning of every word in this utterance.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:5" role="doc-endnote">
+<li id="fn:5">
 <p>The idea of different <em>kinds</em> of posts, that not everything had to be an essay or story or article, was one of my favorite ideas, possibly still the best one, from the original Tumblr.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:6" role="doc-endnote">
+<li id="fn:6">
 <p>I wish I was a long-form, novel-length writer. Up to this point, I am not.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:7" role="doc-endnote">
+<li id="fn:7">
 <p>rhymes with content marketing, oddly enough&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4563,10 +4563,10 @@ query q:
 <hr>
 <p>Narrative is powerful. Makes sense to guard it<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. Both for alignment, but also for preserving myths that hold that purpose up. Myths that come from true stories. Myths that were constructed/embellished for marketing or aiming throughout the company&rsquo;s existence.</p>
 <p>Tall tales and fables by the campfire: now for corporations, too!</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Depending on the company, losing this information is a crisis, possibly existentially:</p>
 <ol>
 <li>
@@ -4581,14 +4581,14 @@ query q:
 </ol>
 <p>Surprisingly, not all of this has the best access control. Most companies choose productivity over secrecy. Theories of friction, agency, and <a href="https://www.economist.com/schools-brief/2017/07/28/coases-theory-of-the-firm">firms</a> being what they are, etc.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>e.g. Musk would very much like everyone to forget he didn&rsquo;t start Tesla.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>Hence, how far venture capitalists and cryptocurrency/AI/hype-cycle founders will go to nudge narratives to suit their needs and away from what the technology actually does, cannot do, or is intended to do.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4668,15 +4668,15 @@ query q:
 <p>Corollary: we’re not here to push JIRA issues/Trello cards/etc. around. We’re here to make something and share it with the world.</p>
 </blockquote>
 <p>Don’t neglect those issues/card<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Finishing is important, but communicating that progress counts for a lot too! There’s no sense in finishing if no one else knows.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Me from several years ago would not believe I’m writing this. 😆</p>
 <p>New conjecture: communicating via cards/issues is as important as communicating via pull requests. The interaction of the former is stakeholder to engineer, the latter interaction is engineer to engineer.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4717,17 +4717,17 @@ query q:
 <p>In that case, the next best way to improve the situation is to improve everyone’s knowledge of the system by writing it down. Document how it works. Even better, elaborate on how it’s <em>supposed</em> to work and how it <em>actually</em> works in some important but problematic circumstances.</p>
 <hr>
 <p>Go from tricky code to refactoring. If you’re stymied by refactoring, switch to documenting it instead. Everyone wins.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Thanks, <a href="https://tidyfirst.substack.com/p/mastering-programming">Kent Beck</a>, for that whopper.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>It may end up making the change easier!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4752,14 +4752,14 @@ query q:
 <p><strong>Hold devices to a purpose.</strong> The intent here is that I’m holding my iPad largely for reading, focus, and writing. My laptop is largely for writing, publishing, and collaboration. The Kindle is, obviously focused on reading alone, despite the predations of Amazon into all possible revenue streams elsewhere.</p>
 <p><strong>Treat the transition to focus with reverence, if not physical space.</strong> When I’m reading or writing, I try to keep my phone out-of-reach. If not in another room. My laptop sits in a (part of the) room where I’m only focused on writing, ideas, publishing, or keeping those things operating smoothly. Whether I’m in my home office or making do on a roadtrip, this is the attention cottage Jacobs mentions above.</p>
 <p>It’s not quite as quaint as an <em>actual</em> cottage. But, it does an okay job balancing the pastoral with the modern.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Caveat, “currently” is on a long road-trip. <a href="https://buttondown.email/therealadam/archive/prelude-my-contribution-to-the-pantheon-of-pop-up/">Read about it</a>!&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4824,17 +4824,17 @@ query q:
 <li>Austin Kleon, <a href="https://austinkleon.com/show-your-work/">Show Your Work</a></li>
 <li>James Clear, <a href="https://jamesclear.com/shoshin">This Zen Concept Will Help You Stop Being a Slave to Old Beliefs </a></li>
 </ul>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Spoiler: creators weren’t even a thing! There was barely developer marketing, even.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>This is how you installed most Linux software back in the day. In the snow, uphill both ways, etc.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -4904,17 +4904,17 @@ query q:
 <p>I wasn’t dwelling on things. I could stop thinking about work once as soon as it snuck into my thoughts. I enjoyed quiet moments and didn’t rush to fill them with distractions. I photographed and journaled and jotted down ideas on the spot and posted photos to blogs. It was pretty dang good.</p>
 <p>But I still found myself sitting there, half-writing and half-journaling, sort of feeling like I’m not prolific enough, even on vacation/disconnection. So maybe disconnection/disengagement isn’t the central thing. Or, ambition and aspiration are orthogonal to personal/work life splits and balances and how they manifest as some degree of “going offline”.</p>
 <p>Possibly, if I were on a road trip or walking or in nature or disengaged or whatever, I would find this feeling/vibe anyway. Is that the disengagement or disconnection talking?</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Of course, it is not. It’s a lot of work to put that many photos and words on the internet.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Assuming Disney parks don’t <em>become</em> my work. 🤞🏻&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -7205,14 +7205,14 @@ llm similar journals \
 </blockquote>
 <p>We’re here to do human things: create for each other, love our friends and family, support our communities, experience and protect our world.</p>
 <p>A life serving only algorithms wrought by corporations<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, engaged with organizations that care more about themselves than their people, or partaking in eco-cultural regimes that disregard our humanity are not worth pursuing.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>IOW, don’t throw your whole existence into being a content creator, folks.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -7232,14 +7232,14 @@ llm similar journals \
 <p><strong>Replace all those feeds and work-think with written and photographic journaling.</strong> Look for photography opportunities, even if you’re not particularly good at it (yet). Write in a journal, daily, even if you’re not good at it (yet). Write about what you’ve photographed, about whatever you’re thinking while disconnected, about that conversation you just had or the novel thing you just saw/did.</p>
 <p><strong>If you want to share via social networks, do it once a day.</strong> I posted (via micro.blog and <a href="https://ulysses.app">Ulysses</a>) a short reflection on each day. For texture, I included a quad of photos, and wrote a few sentences to reflect on my photography or day so far. Once the post is made, put the computer away and get back to reveling in disconnection.</p>
 <p>YMMV, but I hope you try it!</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>With apologies to Craig Mod for standing on the shoulders of <a href="https://craigmod.com/ridgeline/116/">A Walk is a Platform for Creative Work</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -7564,21 +7564,21 @@ A cozy development environment making prototyping and scripting as easy as possi
 <li>Choose a name and location to save your playground</li>
 </ul>
 <p>UIKit is the iOS default for a single-view playground. Storybooks are the default for macOS. To replace those with a SwiftUI component:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">SwiftUI</span>
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">PlaygroundSupport</span>
-
-<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ContentView</span>: View {
-  <span style="color:#66d9ef">var</span> body: some View {
-    VStack {
-      Button(<span style="color:#e6db74">&#34;Tap me!&#34;</span>) {
-      }
-    }
-  }
-}
-
-<span style="color:#66d9ef">let</span> contentView = ContentView()
-PlaygroundPage.current.setLiveView(contentView)
-</code></pre></div><p>🤔 I haven&rsquo;t yet come upon a good heuristic for:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">SwiftUI</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">PlaygroundSupport</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ContentView</span>: View {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> body: some View {
+</span></span><span style="display:flex;"><span>    VStack {
+</span></span><span style="display:flex;"><span>      Button(<span style="color:#e6db74">&#34;Tap me!&#34;</span>) {
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> contentView = ContentView()
+</span></span><span style="display:flex;"><span>PlaygroundPage.current.setLiveView(contentView)
+</span></span></code></pre></div><p>🤔 I haven&rsquo;t yet come upon a good heuristic for:</p>
 <ul>
 <li>when to spin up a project for tinkering vs. a playground</li>
 <li>to what extent one could use TDD in playgrounds</li>
@@ -8586,7 +8586,7 @@ PlaygroundPage.current.setLiveView(contentView)
 <li>Denim, muscles, <em>Born in the USA</em></li>
 <li>The introspective wanderer, bolo tie, <em>Human Touch</em></li>
 <li>Revival, the flavor-saver goatee, <em>The Rising</em></li>
-<li>The rock &lsquo;n roll stateman, dark vest and necktie, <em>High Hopes</em></li>
+<li>The rock &rsquo;n roll stateman, dark vest and necktie, <em>High Hopes</em></li>
 </ul>
 
 		</div>
@@ -8602,7 +8602,7 @@ PlaygroundPage.current.setLiveView(contentView)
 		<div class="e-content">
 			 <ul>
 <li>&ldquo;Summertime Blues&rdquo;, The Who, Pete Townsend</li>
-<li>&ldquo;Estranged&rdquo;, Guns &lsquo;n Roses, Slash</li>
+<li>&ldquo;Estranged&rdquo;, Guns &rsquo;n Roses, Slash</li>
 <li>&ldquo;Glory Days&rdquo;, Bruce Springsteen and the E-Street Band</li>
 <li>&ldquo;Highway to Hell&rdquo;, AC/DC, Angus Young</li>
 </ul>
@@ -8858,20 +8858,20 @@ PlaygroundPage.current.setLiveView(contentView)
 <li>Stroll through the vibrant part of your town</li>
 </ul>
 <p>Any weekend that includes most of those is likely to give me a reset such that any funk that is imminent or currently occurring goes away.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>But that does sound nice!&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>I’m not a handy person. Replacing light bulbs, fixing toilet levers. Putting a new battery in the godforsaken smoke alarm at 3 AM. That’s about the extent of what I’m capable of.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>Your particular choices of beverage/location may vary&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -8952,7 +8952,7 @@ PlaygroundPage.current.setLiveView(contentView)
 <li>Hip-hop: &ldquo;So whatcha want&rdquo;, The Beastie Boys</li>
 <li>Rock and roll: &ldquo;Highway to Hell&rdquo;, AC/DC</li>
 <li>Symphonies: &ldquo;Symphony No. 7&rdquo;, Beethoven</li>
-<li>Pop: &ldquo;Walkin' on Sunshine&rdquo;, Katrina and the Waves</li>
+<li>Pop: &ldquo;Walkin&rsquo; on Sunshine&rdquo;, Katrina and the Waves</li>
 <li>Jazz: “Giant Steps”, John Coltrane</li>
 <li>Funk: “Mothership Connection”, Parliament</li>
 </ul>
@@ -9399,14 +9399,14 @@ PlaygroundPage.current.setLiveView(contentView)
 <p>I’m feeling very 90’s kid right now 😆</p>
 <p>Anti-favorite: &ldquo;Jamie&rsquo;s Got a Gun&rdquo; – I&rsquo;ve heard it too many times.</p>
 <p>Favorites: “F.I.N.E”, “Hangman Jury”, “Shut up and Dance”, “Pink”.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Caveat: nostalgia&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -9440,10 +9440,10 @@ PlaygroundPage.current.setLiveView(contentView)
 <p>In any case, a second, slightly larger and fancier flipping table was provisioned. This one even had place settings. Fast-forward a few months, it too broke. One of our quiz teammates took it upon themselves to <em>repair</em> said table. At this point, we had a very robust flipping table, and <em>some</em> of its place settings remaining.</p>
 <p>Sadly, our regular quizzing was curtailed by the pandemic, shutting down basically all bars wherein one would play pub quiz. I’m not sure where the flipping table ended up; we haven’t used it in the year since we started quizzing again.</p>
 <p>But those months we had a flipping table; glory days!</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Other rules:</p>
 <ul>
 <li>
@@ -9454,11 +9454,11 @@ PlaygroundPage.current.setLiveView(contentView)
 </li>
 </ul>
 &#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Back when supply chains <em>worked</em>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -9518,7 +9518,7 @@ PlaygroundPage.current.setLiveView(contentView)
 		<a href="https://therealadam.com/2022/09/07/great-albums-little.html" class="u-url"><time class="dt-published" datetime="2022-09-07 05:31:03 -0700">Sep 7, 2022</time></a>
 
 		<div class="e-content">
-			 <p><img src="https://images-na.ssl-images-amazon.com/images/I/619S7wxMacS._SX466_.jpg" alt="Album cover for \_Little Rock\_"></p>
+			 <p><img src="https://images-na.ssl-images-amazon.com/images/I/619S7wxMacS._SX466_.jpg" alt="Album cover for _Little Rock_"></p>
 <p>Or: Texas, the Good Parts. (Despite the title!)</p>
 <p>Or: it sounds like Texas, to me. (Again, despite the title.)</p>
 <p>Hayes Carll is my favorite under-the-radar, “this is what country music should sound like” musician. Wit, remorse, nostalgia. Storytelling, quirky characters, relatable characters. Little bit of rock, little bit of western. An ideal Americana mix. It’s all there.</p>
@@ -9560,14 +9560,14 @@ PlaygroundPage.current.setLiveView(contentView)
 <p><a href="https://daverupert.com/2021/02/one-month-on-analog/">Dave Rupert uses/tried Analog</a> too and has a good take on it.</p>
 <p>Tactility is Analog’s leg up. It’s nice to start the day writing out some tasks, looking over the previous day’s cards, shuffling the cards from previous days. Even <a href="https://culturedcode.com/things/">Things, the best task software</a>, can’t provide the tactile “ahhhh”-moment of crossing an item off your list. Tasteful animation, design, and haptics get close, but touching glass isn’t as good as pen and paper.</p>
 <p>That said, I’m not tempted to discard Things. It’s literally one of the best applications I’ve used, ever. That said, it’s charming to have a redundant, back-up scheme for reminding myself of the most important things to accomplish today. Analog is like having a (very handsome) back-up alarm clock to the alarm clock one <em>intends</em> to wake up to. It’s always pleasant to look at, and every so often it is the difference between an energetic day and a day played catching up.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Many productivity schemes feel like they want to take over your life to realize their benefits. IOW, they fantastically fail the “is this sufficiently distinguishable from a cult?” test.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 		</div>
 	  </div>
@@ -13355,7 +13355,7 @@ We do best when we’re pursuing goals that are a little bit tougher than what w
 <!-- wp:more -->
 <!-- /wp:more -->
 <!-- wp:image {"align":"center","id":5154} -->
-<div class="wp-block-image"><figure class="aligncenter"><img src="https://cdn.uploads.micro.blog/151691/2024/b06708b040.jpg" alt="" class="wp-image-5154" /><figcaption>The Jaguar E-Type. Possibly the best possible shape for a car, ever.</figcaption></figure></div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="uploads/2024/b06708b040.jpg" alt="" class="wp-image-5154" /><figcaption>The Jaguar E-Type. Possibly the best possible shape for a car, ever.</figcaption></figure></div>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>I’m taken by that long, long hood. And, as per my principles, that is function defining form. The car had an inline-6 cylinder engine and later a V-12 engine. Both very long engines. Further, the E-Type is a sports car and sports cars of the era were all rear-wheel drive. That means the engine has to be mounted on the length of the car. All that adds up to requiring a <em>very</em> long hood. And, it turns out, the designers working on the form did a fine job accommodating that function!</p>
@@ -13364,7 +13364,7 @@ We do best when we’re pursuing goals that are a little bit tougher than what w
 <p>I’m not particularly taken by modern Lamborghini, but the Aventador serves nicely as another example of form determining function (at least in my imagination):</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"align":"center","id":5152} -->
-<div class="wp-block-image"><figure class="aligncenter"><img src="https://cdn.uploads.micro.blog/151691/2024/6e69b7a3b9.jpg" alt="" class="wp-image-5152" /><figcaption>The Lamborghini Aventador. An ode to mechanical aggression.</figcaption></figure></div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="uploads/2024/6e69b7a3b9.jpg" alt="" class="wp-image-5152" /><figcaption>The Lamborghini Aventador. An ode to mechanical aggression.</figcaption></figure></div>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>The Aventador is also a sports car and also contains a rather large V-12 engine, this time mounted <em>behind</em> the driver. What transpired in the decades between the E-Type and the Aventador is a whole lot of technological development. Where the E-Type is a masterpiece in blended lines, the Aventador is a cacophony of gizmos and dingers on the outside of the car, particularly the back. Most of those slats and ducts serve the function of a) cooling the car’s engine, turbochargers, or brakes, b) shaping air flow around the car to reduce drag or increase grip in corners, and/or c) making the car “look pricey and fast”. I like to think that an initial design concept had more gracefully blended curves, but the engineering director put the kibosh on it because it would prevent exposing some kind of cooling duct or aerodynamic surface in a crucial spot. Function (going fast, looking pricey) determines form.</p>
@@ -13373,7 +13373,7 @@ We do best when we’re pursuing goals that are a little bit tougher than what w
 <p>I’m increasingly convinced the Toyota Prius, alongside the Tesla Model S, will be thought of as the pivot point from oil to renewable culture. This shape will be part of that story:</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"align":"center","id":5153} -->
-<div class="wp-block-image"><figure class="aligncenter"><img src="https://cdn.uploads.micro.blog/151691/2024/244d89207c.jpg" alt="" class="wp-image-5153" /><figcaption>The Toyota Prius. It is a car, with a shape.</figcaption></figure></div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="uploads/2024/244d89207c.jpg" alt="" class="wp-image-5153" /><figcaption>The Toyota Prius. It is a car, with a shape.</figcaption></figure></div>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Electric cars <em>require</em> efficiency throughout. Lower weight, skinny tires to reduce friction, and low aerodynamic drag. The last, I fear, is the function that will lead us to extremely boring “aero-lump” forms. Most electric/self-driving car designs are going for “sitting room on wheels” as function, and there are only so many low-drag forms that can take. None of them “exciting”.</p>
@@ -13383,6 +13383,8 @@ We do best when we’re pursuing goals that are a little bit tougher than what w
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>In principle, I still like the idea of form following function. In my heart, for the future of car-based transportation, I’m a little worried about the outcomes.</p>
+<!-- /wp:paragraph -->
+sed transportation, I’m a little worried about the outcomes.</p>
 <!-- /wp:paragraph -->
 		</div>
 	  </div>
@@ -14154,7 +14156,7 @@ allocated memory by gem
 		<div class="e-content">
 			 <p><em>Into the Great Wide Open</em> strikes me as a singular album. Perhaps it&rsquo;s not even the <em>best</em> Tom Petty album, but it stands out from the rest in some kind of way.</p>
 <p>Maybe it&rsquo;s nostalgia? It&rsquo;s the first Petty album I bought.</p>
-<p>Maybe it&rsquo;s humble? None of the songs are flashy, sitting right on the fence between songwriting and rock &lsquo;n roll.</p>
+<p>Maybe it&rsquo;s humble? None of the songs are flashy, sitting right on the fence between songwriting and rock &rsquo;n roll.</p>
 <p>Maybe it&rsquo;s the lyrics? I&rsquo;ve listened to this album <em>a lot</em>, so I&rsquo;ve actually heard the lyrics and they&rsquo;re the right balance between clever and storytelling, for me.</p>
 <p>Maybe it&rsquo;s Jeff Lynne? Love that guy&rsquo;s production work. Great touch.</p>
 <p>It&rsquo;s not too long, it&rsquo;s not too short. All the moving parts do their job without getting showy. Perhaps, it&rsquo;s just more than the sum of its parts.</p>
@@ -14899,7 +14901,7 @@ The central insight of Talking Heads—what made them not just weird but excitin
 		<a href="https://therealadam.com/2018/07/29/it-is-i.html" class="u-url"><time class="dt-published" datetime="2018-07-29 09:46:45 -0700">Jul 29, 2018</time></a>
 
 		<div class="e-content">
-			 <p>It is I, who dwells at coffee shops, who sometimes reads paper books instead of a glass display, who prefers Apple Pay over card swiping when possible.<img src="https://cdn.uploads.micro.blog/151691/2024/d55aae0d28.jpg" class="wp-image-4749 alignright" height="4032" alt="Greater Good Coffee Roasters interior" width="3024"></p>
+			 <p>It is I, who dwells at coffee shops, who sometimes reads paper books instead of a glass display, who prefers Apple Pay over card swiping when possible.<img src="uploads/2024/d55aae0d28.jpg" class="wp-image-4749 alignright" height="4032" alt="Greater Good Coffee Roasters interior" width="3024"></p>
 
 		</div>
 	  </div>
@@ -15028,7 +15030,7 @@ The central insight of Talking Heads—what made them not just weird but excitin
 
 		<div class="e-content">
 			 <p>I&rsquo;ve been trying to wrap my head around machine learning lately. Today I worked through the <a href="https://js.tensorflow.org/tutorials/mnist.html">TensorFlow.js tutorial on recognizing handwritten numbers with a neural network</a>. Herein, my notes and scribbles.</p>
-<p>[caption id=&ldquo;attachment_4714&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;1537&rdquo;]<img class="alignnone size-full wp-image-4714" src="https://cdn.uploads.micro.blog/151691/2024/080238c7a1.jpg" alt="Hand-written notes on machine learning" width="1537" height="1961" /> TensorFlow: it&rsquo;s about turning linear algebra into models built of layers built of math[/caption]</p>
+<p>[caption id=&ldquo;attachment_4714&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;1537&rdquo;]<img class="alignnone size-full wp-image-4714" src="https://therealadam.com/uploads/2024/080238c7a1.jpg" alt="Hand-written notes on machine learning" width="1537" height="1961" /> TensorFlow: it&rsquo;s about turning linear algebra into models built of layers built of math[/caption]</p>
 <p>My previous forays into machine learning left me a little frustrated: I could tell there was <em>language,</em> <em>pattern, </em>and <em>notations</em> to this, but I couldn&rsquo;t see them from the novelty of new-to-me words like sigmoids, convolution, and hidden layers. Turns out those are <em>part</em> of the language.</p>
 <p>But the really handy idioms are encoded in TensorFlow&rsquo;s high-level model-and-layer API. A model encapsulates a chunk of machine learning that can be trained to classify inputs (images, texts, etc.) based on a mess of training data (pre-classified stuff). Every model is built from a network of layers; layers use linear algebra to transform numbers into classifications.</p>
 <p>Once you&rsquo;ve built a model, you feed it a bunch of training data so that it can learn the coefficients and other number-stuff that goes inside the math-y network. You also provide it with an <em>optimizer</em> and <em>loss</em> function so that as the model is trained, it can know whether its getting better or worse at classifying data.</p>
@@ -15544,7 +15546,7 @@ __FILE__.
 
 		<div class="e-content">
 			 <p>Actually, I probably wouldn&rsquo;t change much. But I have questions about this marketing photo:</p>
-<p>[caption id=&ldquo;attachment_4434&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;487&rdquo;]<img class="alignnone size-full wp-image-4434" src="https://cdn.uploads.micro.blog/151691/2024/fcc021864b.jpg" alt="DJ Khaled posing with a baby human and a baby lion" width="487" height="286" /> People, do not pose with apex predators. And especially, don&rsquo;t keep them as domestic pets. I&rsquo;m looking at you, oil billionaires.[/caption]</p>
+<p>[caption id=&ldquo;attachment_4434&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;487&rdquo;]<img class="alignnone size-full wp-image-4434" src="https://therealadam.com/uploads/2024/fcc021864b.jpg" alt="DJ Khaled posing with a baby human and a baby lion" width="487" height="286" /> People, do not pose with apex predators. And especially, don&rsquo;t keep them as domestic pets. I&rsquo;m looking at you, oil billionaires.[/caption]</p>
 <ol>
     <li>Just, no. Do not pose with apex predators, even the little ones. Not okay, Mr. Khaled. I know this isn't a question?</li>
     <li>Why doesn't said apex predator kitty get a matching robe?</li>
@@ -15812,7 +15814,7 @@ ys = [4, 5, 6].to_enum
 			 <p>With feedback, like jokes, timing is everything. Good feedback at a bad time won&rsquo;t do the trick.</p>
 <p>I’ve mostly experienced programming feedback through pull requests. This is way better than no feedback. However, since most pull requests occur at the end of work, and not somewhere in the middle, some kinds of feedback are not conducive to pull requests.</p>
 <p>Suppose all feedback falls somewhere on two axes: “timeliness” and “depth”. The narrow sweet spot of code review is apparent:</p>
-<p>[caption id=&ldquo;attachment_4302&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;861&rdquo;]<img class="alignnone size-full wp-image-4302" src="https://cdn.uploads.micro.blog/151691/2024/afcef31d4b.jpg" alt="Pairing and code review are not so similar" width="861" height="797" /> Pairing and code review are not so similar[/caption]</p>
+<p>[caption id=&ldquo;attachment_4302&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;861&rdquo;]<img class="alignnone size-full wp-image-4302" src="https://therealadam.com/uploads/2024/afcef31d4b.jpg" alt="Pairing and code review are not so similar" width="861" height="797" /> Pairing and code review are not so similar[/caption]</p>
 <p>The sweet spot in the top-right corner is when code review works best: unhurried and in-depth feedback. I’d hesitate to call the lower-right corner of hurried, minimal feedback a code review at all; it’s more like rubber stamping.</p>
 <p>I’ve often referred to code review, flippantly, as the worst form of pairing yet invented. I’ve given a lot of code review feedback in the past that was better suited to the synchronous nature of pairing than the very asynchronous nature of code reviews. That said, I feel like pairing is an excellent way to give all manners of feedback in the moment the code is being conceived or written. You can immediately point out possible incorrectness or better designs and talk it out, with the code at hand, with your collaborator.</p>
 <p>However, we can’t all pair all the time. Let me show you how I’m trying to better time my feedback when I can’t share it immediately.</p>
@@ -16039,7 +16041,7 @@ ys = [4, 5, 6].to_enum
 
 		<div class="e-content">
 			 <p>I am basically OK with the tradeoffs involved in using autoloading in Rails. I do, however, rankle a little bit at this bit of advice in the <a href="http://guides.rubyonrails.org/engines.html">Rails guide to developing engines</a>.</p>
-<p>[caption id=&ldquo;attachment_4216&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;661&rdquo;]<img class="alignnone size-full wp-image-4216" src="https://cdn.uploads.micro.blog/151691/2024/c45df857d1.jpg" alt="Screencapture from Rails Guide to Engines" width="661" height="298" /> Screencapture from Rails Guide to Engines[/caption]</p>
+<p>[caption id=&ldquo;attachment_4216&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;661&rdquo;]<img class="alignnone size-full wp-image-4216" src="https://therealadam.com/uploads/2024/c45df857d1.jpg" alt="Screencapture from Rails Guide to Engines" width="661" height="298" /> Screencapture from Rails Guide to Engines[/caption]</p>
 <p>In short, when configuring an engine from an initializer, you’re supposed to protect references to autoloaded application classes (e.g. models) by encoding them as strings. Your engine later <code>constantize</code>s the string to a class and everything is back to normal.</p>
 <p>A thing I am not OK with is “programming with strings”. As an ideal, strings are inputs from other machines or humans and internal references to code are something else. In Ruby, symbols fill in nicely for the latter. Could I refer to classes as Symbols instead of Strings and live with the tradeoffs?</p>
 <p>Well it turns out, oddly enough, that Rails is pretty sparing with Symbol extensions. It has only 120 methods after Rails loads, compared to 257 for String. There are no specific extensions to symbol, particularly for class-ifying them. Even worse (for my purposes), there isn’t a particularly great way to use symbols to refer to namespaced classes (e.g. <code>Foo::Bar</code>).</p>
@@ -16091,9 +16093,9 @@ ys = [4, 5, 6].to_enum
 
 		<div class="e-content">
 			 <p>I love the <a href="https://en.wikipedia.org/wiki/Tomorrowland_Transit_Authority_PeopleMover">Tomorrowland Transit Authority PeopleMover</a>. It&rsquo;s what a transportation system should be.</p>
-<p>[caption id=&ldquo;attachment_4190&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;500&rdquo;]<img class="alignnone size-full wp-image-4190" src="https://cdn.uploads.micro.blog/151691/2024/dcc239724c.jpg" alt="People Mover Disney World" width="500" height="170" /> People Mover entrance, overlooking Main Street and the Cinderalla Castle, overlooking Tomorrowland[/caption]</p>
+<p>[caption id=&ldquo;attachment_4190&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;500&rdquo;]<img class="alignnone size-full wp-image-4190" src="https://therealadam.com/uploads/2024/dcc239724c.jpg" alt="People Mover Disney World" width="500" height="170" /> People Mover entrance, overlooking Main Street and the Cinderalla Castle, overlooking Tomorrowland[/caption]</p>
 <p>Outside but covered. Elevated so pedestrians can pass below it. Passing in and out of nearby structures. Couch-like.</p>
-<p>[caption id=&ldquo;attachment_4191&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;500&rdquo;]<img class="alignnone size-full wp-image-4191" src="https://cdn.uploads.micro.blog/151691/2024/c76712f9a6.jpg" alt="People Mover Disney World" width="500" height="252" /> The People Mover over Test Track and Space Mountain[/caption]</p>
+<p>[caption id=&ldquo;attachment_4191&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;500&rdquo;]<img class="alignnone size-full wp-image-4191" src="https://therealadam.com/uploads/2024/c76712f9a6.jpg" alt="People Mover Disney World" width="500" height="252" /> The People Mover over Test Track and Space Mountain[/caption]</p>
 <p>Futuristic but achievable. <a href="https://therealadam.com/2016/08/01/getting-around-together/">Doesn&rsquo;t isolate people from each other</a>. You&rsquo;re one of my favorites, People Mover.</p>
 
 		</div>
@@ -16111,7 +16113,7 @@ ys = [4, 5, 6].to_enum
 <p>Sunk.</p>
 <p>Luckily, only an hour in, I rolled over to the product manager and asked if it was okay if we were a little clever about the feature. We couldn&rsquo;t request All The Things, but we could request Each of The Things that we knew about. It wasn&rsquo;t great, but it was better than sunk.</p>
 <p>The product manager proceeded to tell me that was okay and in fact that&rsquo;s kind of how the feature works for other APIs too. I hadn&rsquo;t noticed this because I was up to my neck in code details. She described how this feature is used in out onboarding process. It wouldn&rsquo;t matter, at that level, whether we made a dozen requests or a hundred.</p>
-<p>I wrote basically no code that day. Someone who &ldquo;crushes code&rdquo; or &ldquo;moves fast and breaks things&rdquo; would say I didn&rsquo;t pull my weight. Screw &lsquo;em.</p>
+<p>I wrote basically no code that day. Someone who &ldquo;crushes code&rdquo; or &ldquo;moves fast and breaks things&rdquo; would say I didn&rsquo;t pull my weight. Screw &rsquo;em.</p>
 <p>I didn&rsquo;t go down a rabbit hole valiantly trying to figure out how to make a sub-par API work better. I didn&rsquo;t invent some other way for this feature to work. My wheels were spinning, but only for a moment.</p>
 <p>Instead, I worked with the team, learned about the product, brainstormed, and figured out a good way forward. I call it a very productive day.</p>
 
@@ -16135,7 +16137,7 @@ ys = [4, 5, 6].to_enum
 <p><a href="http://worrydream.com">Bret Victor</a> has bigger ideas for computing. He seeks to design systems that help us explore and reason on big problems. Rather than using computers as blunt tools for doing the busy work of our day-to-day jobs as we currently do, we should build systems that help all of us think creatively at a higher level than we currently do.</p>
 <p>Software that embodies that Quality is less like a screen and input device and more like a working library. Information you need, in the form of books and videos, line the walls. Where there are no books, there are whiteboards for brainstorming, sharing ideas, and keeping track of things. In the center of the room are wide, spacious desks; you can sit down to focus on working something through or stand and shuffle papers around to try and organize a problem such that an insight reveals itself. You don’t work <em>at</em> the computer, you work <em>amongst</em> the information.</p>
 <hr />
-<p>They&rsquo;re all good qualities. Let&rsquo;s build &lsquo;em all.</p>
+<p>They&rsquo;re all good qualities. Let&rsquo;s build &rsquo;em all.</p>
 
 		</div>
 	  </div>
@@ -16781,7 +16783,7 @@ end
 <p>Around 2004, amidst the decline of peer-to-peer technologies, I had a hunch that decentralized technology was going to lose out to centralization. Lo and behold, Friendster then MySpace then Facebook then Twitter made this real. People, I think, will always look to a Big Name first and look to run their own infrastructure nearly last.</p>
 <p>In light of that, I still think <a href="https://medium.com/@anildash/the-lost-infrastructure-of-social-media-d2b95662ccd3#.y7nb4kz2u">the lost infrastructure of social media</a> is worth considering. As we stare down the barrel of a US administration that is likely far less benevolent with its use of an enormous propaganda and surveillance mechanism, should we swim upstream of the ease of centralization and decentralize again?</p>
 <p>Consider this chart identifying community and commercially run infrastructure that used to exist and what has, in some cases, succeeded it:</p>
-<p>[caption id=&ldquo;attachment_3832&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;796&rdquo;]<img class="alignnone size-full wp-image-3832" src="https://cdn.uploads.micro.blog/151691/2024/312f9f314f.jpg" alt="Connective tissue, then and now" width="796" height="475" /> Connective tissue, then and now[/caption]</p>
+<p>[caption id=&ldquo;attachment_3832&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;796&rdquo;]<img class="alignnone size-full wp-image-3832" src="https://therealadam.com/uploads/2024/312f9f314f.jpg" alt="Connective tissue, then and now" width="796" height="475" /> Connective tissue, then and now[/caption]</p>
 <p>I look over that chart and think, yeah a lot of this would be cool to build again.</p>
 <p>Would people gravitate towards it? Maybe.</p>
 <p>Could it help pop filter bubbles, social sorting, fake news and trust relationships? Doesn’t seem worth doing if it can’t.</p>
@@ -16803,18 +16805,18 @@ end
 		<div class="e-content">
 			 <p>Mercedes (is it ok if I call you MB?), I think we need to talk. You’re doing great in Formula 1, congratulations on that! That said, you’ve gone in a weird direction with your passenger car dashboards. I suspect there are five different teams competing to win with these dashboards and I don’t think anyone, especially this car enthusiast, is winning overall.</p>
 <p>Here’s your current entry-level SUV, the GLA. If my eye is correct, this is one of your more dated dash designs:</p>
-<p>[caption id=&ldquo;attachment_3827&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;634&rdquo;]<img class="alignnone size-full wp-image-3827" src="https://cdn.uploads.micro.blog/151691/2024/597cb5b00a.jpg" alt="All the buttons!" width="634" height="221" /> All the buttons![/caption]</p>
+<p>[caption id=&ldquo;attachment_3827&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;634&rdquo;]<img class="alignnone size-full wp-image-3827" src="https://therealadam.com/uploads/2024/597cb5b00a.jpg" alt="All the buttons!" width="634" height="221" /> All the buttons![/caption]</p>
 <p>Back in the day, I think, you had someone on staff at MB whose primary job was to make sure your dashboards had at least 25 buttons on them. This was probably a challenging job before the advent of the in-car cellular phone. However, once those became common, that was 12 easy buttons if you just throw a dial pad onto the dash. And you did!</p>
 <p>So it’s easy to identify this as an older design from the dozens  (43) of buttons. But the age of this design also shows from the LCD. One, it’s somewhat small. Two, and more glaringly, you simply tacked the LCD onto the dashboard. What happened here? Did you run out of time?</p>
 <p>I think you can do better. The eyeball vents are nice though!</p>
 <p>Now let’s look at a slightly more modern, and much further upscale, design. Your AMG GT coupe:</p>
-<p>[caption id=&ldquo;attachment_3828&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;673&rdquo;]<img class="alignnone size-full wp-image-3828" src="https://cdn.uploads.micro.blog/151691/2024/ab532700b6.jpg" alt="All the suede" width="673" height="353" /> All the suede[/caption]</p>
+<p>[caption id=&ldquo;attachment_3828&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;673&rdquo;]<img class="alignnone size-full wp-image-3828" src="https://therealadam.com/uploads/2024/ab532700b6.jpg" alt="All the suede" width="673" height="353" /> All the suede[/caption]</p>
 <p>OK so you lost most of the buttons in favor of <strong>bigger, chunkier</strong> buttons. That’s good! You also made a little scoop in the dash for the LCD. That’s progress, but the placement still feels awkward. I know that’s where all your luxury car friends put the LCD now, but you’re so dominant in F1, maybe you can do better here too?</p>
 <p>Can we take a moment to talk about the interactions a little? Your take on the rotary control is a little weird. You’ve got one, and it’s got a little hand rest on top of it. That seems good. But then the hand rest is also a touch interface for scribbling letters? Seems weird! I’ve never used that, but I’m a little skeptical.</p>
 <p>Next, you’ve gone through some weird stuff with your shifters. You had a really lovely gated shifter on the S-class couple as long ago as the early 90’s! Lately you’ve tried steering column shifters, and now it seems you’ve settled on a soap-shaped chunk of metal that you move up and down to change directions and put it in park. I feel like you should give up the physical shifter thing and just go with (you’re gonna like this) more buttons.</p>
 <p>My parting thought on the GT’s interior is this: width. Your designs impart a sense of tremendous girth in the dash, making the car feel bigger. We’ll come back to that immediately…</p>
 <p>Finally, one of your most recent designs, the E-class sedan:</p>
-<p>[caption id=&ldquo;attachment_3829&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;867&rdquo;]<img class="alignnone size-full wp-image-3829" src="https://cdn.uploads.micro.blog/151691/2024/5c1db76cc8.jpg" alt="All the pixels!" width="867" height="405" /> All the pixels![/caption]</p>
+<p>[caption id=&ldquo;attachment_3829&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;867&rdquo;]<img class="alignnone size-full wp-image-3829" src="https://therealadam.com/uploads/2024/5c1db76cc8.jpg" alt="All the pixels!" width="867" height="405" /> All the pixels![/caption]</p>
 <p>Again with a regal sense of width. Personally, I don’t like it. It makes your car seem like a giant sofa.</p>
 <p>You are making great progress on reducing the number of buttons. Again, kudos.</p>
 <p>OK, clearly you got a great deal on LCD panels. Plus, an almost equally good deal on eyeball vents. Good for you!</p>
@@ -16929,7 +16931,7 @@ expect_any_instance_of(ModelParents).to receive(:do_a_sideeffect)
 		<a href="https://therealadam.com/2016/10/09/bon-iver-discovers.html" class="u-url"><time class="dt-published" datetime="2016-10-09 11:00:00 -0700">Oct 9, 2016</time></a>
 
 		<div class="e-content">
-			 <p>[caption id=&ldquo;attachment_3815&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;213&rdquo;]<img class="alignnone size-full wp-image-3815" src="https://cdn.uploads.micro.blog/151691/2024/0ae508b5a9.jpg" alt="Someone just discovered all the weird glyphs you can make if you hold the option key and type random stuff!" width="213" height="539" /> Someone just discovered all the weird glyphs you can make if you hold the option key and type random stuff![/caption]</p>
+			 <p>[caption id=&ldquo;attachment_3815&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;213&rdquo;]<img class="alignnone size-full wp-image-3815" src="https://therealadam.com/uploads/2024/0ae508b5a9.jpg" alt="Someone just discovered all the weird glyphs you can make if you hold the option key and type random stuff!" width="213" height="539" /> Someone just discovered all the weird glyphs you can make if you hold the option key and type random stuff![/caption]</p>
 <p><em>22, A Million</em>, quick thoughts:</p>
 <ul>
 <li>first track has a very Tune-Yards drums thing going</li>
@@ -16951,7 +16953,7 @@ expect_any_instance_of(ModelParents).to receive(:do_a_sideeffect)
 		<a href="https://therealadam.com/2016/10/08/my-first-car.html" class="u-url"><time class="dt-published" datetime="2016-10-08 09:55:36 -0700">Oct 8, 2016</time></a>
 
 		<div class="e-content">
-			 <img class="alignnone size-full wp-image-3806" src="https://cdn.uploads.micro.blog/151691/2024/ba3bc9ce52.jpg" alt="tumblr_oe7br9uhal1roi5yvo1_1280" width="1280" height="864" />
+			 <img class="alignnone size-full wp-image-3806" src="https://therealadam.com/uploads/2024/ba3bc9ce52.jpg" alt="tumblr_oe7br9uhal1roi5yvo1_1280" width="1280" height="864" />
 <p>My first car. Except not right-hand drive. 1989 Honda Accord. And it was not nearly so clean, or grey. But you could fit a double bass in the front seat! Pretty practical for my high school needs.</p>
 
 		</div>
@@ -17116,7 +17118,7 @@ Train time is essential time, and rail travel isn’t strictly pragmatic. For ma
 		<div class="e-content">
 			 <p>I’m officially intrigued by the <a href="http://carinteriors.tumblr.com/post/132545988416/2015-audi-tts">Audi TT</a> and R8 going with no center display. The look is retro and functional. Will it annoy passengers, or do passengers who want to change the radio or see the map even matter in those cars? Worth noting that the 2016 A4 has the same display for the instrument cluster <em>and</em> a giant center display.</p>
 <figure>
-<img src="https://cdn.uploads.micro.blog/151691/2024/844dd40b87.jpg" alt="2015 Audi TTS" />
+<img src="uploads/2024/844dd40b87.jpg" alt="2015 Audi TTS" />
 <figcaption>2015 Audi TTS</figcaption>
 </figure>
 <p>Another cool design detail: the A/C controls are on the center of the eyeball vents. Pretty cool!</p>
@@ -17852,7 +17854,7 @@ For example, a good friend of mine runs and has run an electronic trading exchan
 
 		<div class="e-content">
 			 <p>Right after we finish ridding the world of &ldquo;floppy-disk-to-save&rdquo; icons, I propose we remove this bit of obtuse skeumorphism from the default view in word processors like Google Docs:</p>
-<p>[caption id=&ldquo;attachment_3570&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;660&rdquo;]<img class="wp-image-3570 size-large" src="https://cdn.uploads.micro.blog/151691/2024/14e37e9087.jpg" alt="the margin setting thingy on a typewriter" width="660" height="35" /> Who uses this anymore?[/caption]</p>
+<p>[caption id=&ldquo;attachment_3570&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;660&rdquo;]<img class="wp-image-3570 size-large" src="https://therealadam.com/uploads/2024/14e37e9087.jpg" alt="the margin setting thingy on a typewriter" width="660" height="35" /> Who uses this anymore?[/caption]</p>
 <p>I vaguely remember using one of these to adjust margins and such on a real typewriter once. Its possible I used one to eek out an extra page in a school report during junior high. Since then? Wasted screen space!</p>
 <p>Act like a modern device, word processors. Hide that stuff in a menu somewhere!</p>
 
@@ -17869,7 +17871,7 @@ For example, a good friend of mine runs and has run an electronic trading exchan
 		<div class="e-content">
 			 <p>When it comes to Twitter, things can get out of hand fast. Setting aside the hostile environment some people face when they participate in Twitter (which is setting aside a doozy!), it helps to have a few defense mechanism for what is appearing in your stream.</p>
 <p>Most importantly, I evaluate each potential follow by the rule of &ldquo;smart and happy&rdquo;. Which doesn&rsquo;t mean smart, angry people are automatically off the list. But, they have to show a really unique intelligence to get past my emotional filter. I made a graphic to boil down my &ldquo;should follow?&rdquo; decision:</p>
-<p>[caption id=&ldquo;attachment_3566&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;235&rdquo;]<img class="size-medium wp-image-3566" src="https://cdn.uploads.micro.blog/151691/2024/e8076d55a4.jpg" alt="How to decide to follow someone on Twitter." width="235" height="300" /> How to decide to follow someone on Twitter.[/caption]</p>
+<p>[caption id=&ldquo;attachment_3566&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;235&rdquo;]<img class="size-medium wp-image-3566" src="https://therealadam.com/uploads/2024/e8076d55a4.jpg" alt="How to decide to follow someone on Twitter." width="235" height="300" /> How to decide to follow someone on Twitter.[/caption]</p>
 <p>Non-brilliant and happy? Probably in! Brilliant and happy? Probably in! Smart with a little bit of edge? Maybe. Just angry? No thanks.</p>
 <p>Information overload, confirmation bias, and overwhelming negativity are also handy things to manage. I do a few things to keep my head above water and a not-too-dismal outlook on life:</p>
 <ul>
@@ -18464,7 +18466,7 @@ One of my favorite techniques for really learning a new language is to read the 
 
 		<div class="e-content">
 			 <p>I&rsquo;m going to Vegas this weekend with my wife on a real vacation where we&rsquo;re going to do as little as possible. Not run around Disney World all day, not drive up and down the southern California coast. Based on this little bit of research, I can&rsquo;t wait.</p>
-<img class="aligncenter size-full wp-image-3475" src="https://cdn.uploads.micro.blog/wp-content/151691/2014/09/classyvegas.png" alt="Three Starbucks facing each other" width="275" height="227" />
+<img class="aligncenter size-full wp-image-3475" src="http://therealadam.com/wp-content/uploads/2014/09/classyvegas.png" alt="Three Starbucks facing each other" width="275" height="227" />
 
 		</div>
 	  </div>
@@ -18756,7 +18758,7 @@ p s.foo.bar #=&gt; 42
 <p>Lots of people are excited about a few central topics.</p>
 <p><strong>JavaScript</strong>. They want to build ambitious apps, with Ember, Lineman, and other tools. Developers seem somewhat concerned that building apps this way is swimming upstream. Or that it&rsquo;s early days and things are changing quickly. Or they think it&rsquo;s awesome to work in a growing field. It&rsquo;s all of those things.</p>
 <p><strong>Service-oriented Architecture</strong>. I went to talks about extracting services, designing services, implementing authentication/authorization across services, and how to write the client side of your various services. The talks felt like they were past the &ldquo;look at this novel thing!&rdquo; phase and into the &ldquo;well here&rsquo;s the nitty gritty&rdquo; phase. I didn&rsquo;t happen upon any sessions of the &ldquo;here&rsquo;s how this thing punched me in the face!&rdquo; sort, which is the kind of thing I, personally, want to learn about right now.</p>
-<p><strong>Getting outside of Rails</strong>. Beyond SOA, some folks are going off the golden path and finding some success. I attended one good talk on adopting ideas from Domain Driven Design and hexagonal architecture. I found Ernie Miller&rsquo;s ideas about how he&rsquo;s worked with Rails' flaws interesting, even though I often didn&rsquo;t agree.</p>
+<p><strong>Getting outside of Rails</strong>. Beyond SOA, some folks are going off the golden path and finding some success. I attended one good talk on adopting ideas from Domain Driven Design and hexagonal architecture. I found Ernie Miller&rsquo;s ideas about how he&rsquo;s worked with Rails&rsquo; flaws interesting, even though I often didn&rsquo;t agree.</p>
 <h2>People</h2>
 <p>The conference started with David&rsquo;s keynote throwing barbs at the attitude some people display towards TDD (an ambiguous acryonym to start with). Many speakers opened with, in my opinion vapid, jokes about this. Other people seemed to take personal offense that TDD might not be everything. These reactions were, I found, not particularly interesting. The more interesting ones were those who found it as a challenge to consider how they build applications, either through taste and intuition or through reasoning and engineering.</p>
 <p>There&rsquo;s always, at least in conversations I find myself in, some question of where Rails is now. Relative to other technologies, is it a leader, a follower, a player, a has-been? Every year, it&rsquo;s more of a safe assumption that Rails is a given, that it&rsquo;s not going to up and disappear. Still, there&rsquo;s a desire to keep it fresh, avoid stagnation, and above all avoid becoming the demons (J2EE, .NET, PHP, etc.) that people used before Rails. A lot of this discussion seems to be happening around the size and frameworkness of Rails. There has always been pockets of interest around things that are smaller than Rails (like Sinatra, ROM, etc.) More interesting, there is some defense of largeness now, especially in the context of Ember. This is the most interesting, and at times tedious, debate, for me personally.</p>
@@ -18775,7 +18777,7 @@ p s.foo.bar #=&gt; 42
 		<a href="https://therealadam.com/2014/03/29/a-chunk-of.html" class="u-url"><time class="dt-published" datetime="2014-03-29 09:41:15 -0700">Mar 29, 2014</time></a>
 
 		<div class="e-content">
-			 <p><a href="https://cdn.uploads.micro.blog/wp-content/151691/2014/03/20140328-172728.jpg"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2014/03/20140328-172728.jpg" alt="20140328-172728.jpg" class="alignnone size-full" /></a><br /><br />So I’m in rehearsals for a comedic musical. I love comedy. I&rsquo;m very &ldquo;meh&rdquo; about musicals; I don&rsquo;t know much about them. I like combining familiar and strange things, so it&rsquo;s great so far.</p>
+			 <p><a href="http://therealadam.com/wp-content/uploads/2014/03/20140328-172728.jpg"><img src="http://therealadam.com/wp-content/uploads/2014/03/20140328-172728.jpg" alt="20140328-172728.jpg" class="alignnone size-full" /></a><br /><br />So I’m in rehearsals for a comedic musical. I love comedy. I&rsquo;m very &ldquo;meh&rdquo; about musicals; I don&rsquo;t know much about them. I like combining familiar and strange things, so it&rsquo;s great so far.</p>
 <p>I carry a big chunk of paper around what has the lines written on it. Some of the pages are typed, some of them are photocopies of the script from the original production in 1995. It&rsquo;s held together with brads. It&rsquo;s completely archaic.</p>
 <p>The director is kind of a &ldquo;most interesting man in the world&rdquo; kind of character. Mixed in with a little bit of the least organized person in the world.</p>
 <p>We have yet to receive the actual music for this musical. We learned the closing song for act one last night. The whole song has fewer than ten words in it.</p>
@@ -19213,7 +19215,7 @@ Apparently its sister plane, the A-12, <a href="http://gizmodo.com/302164/secret
 		<a href="https://therealadam.com/2013/12/14/nshipster-rainbow-bar.html" class="u-url"><time class="dt-published" datetime="2013-12-14 13:13:11 -0700">Dec 14, 2013</time></a>
 
 		<div class="e-content">
-			 <p><a href="https://gumroad.com/l/nshipster"><img class="size-full" alt="NSHipster Rainbow bar" src="https://cdn.uploads.micro.blog/wp-content/151691/2013/12/nshipster-rainbow.png" /></a></p>
+			 <p><a href="https://gumroad.com/l/nshipster"><img class="size-full" alt="NSHipster Rainbow bar" src="http://therealadam.com/wp-content/uploads/2013/12/nshipster-rainbow.png" /></a></p>
 <p>My favorite design touch in the Gowalla apps was the rainbow bar. Small wonder that fellow Gowalla alumni Mattt Thompson included one on the landing page for his collection of NSHipster essays that you can now buy as an eBook with cash money. <em>Ed. apparently all the Gumroad pages have a rainbow bar. Mattt&rsquo;s still awesome.</em></p>
 
 		</div>
@@ -19289,7 +19291,7 @@ On the role designers play, what they do as careers progress, and how design can
 		<a href="https://therealadam.com/2013/11/09/friday-at-a.html" class="u-url"><time class="dt-published" datetime="2013-11-09 11:50:21 -0700">Nov 9, 2013</time></a>
 
 		<div class="e-content">
-			 <p><a href="https://cdn.uploads.micro.blog/wp-content/151691/2013/11/20131109-124843.jpg"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/11/20131109-124843.jpg" alt="20131109-124843.jpg" class="alignnone size-full" /></a>
+			 <p><a href="http://therealadam.com/wp-content/uploads/2013/11/20131109-124843.jpg"><img src="http://therealadam.com/wp-content/uploads/2013/11/20131109-124843.jpg" alt="20131109-124843.jpg" class="alignnone size-full" /></a>
 <br /><br /></p>
 <p>Could be any Mexican restaurant. Could be any Friday. This one seemed special to me.</p>
 
@@ -19490,7 +19492,7 @@ I like my desk, but I know the hours I can sit at it and get work done before fa
 		<a href="https://therealadam.com/2013/10/20/off-my-grid.html" class="u-url"><time class="dt-published" datetime="2013-10-20 12:38:58 -0700">Oct 20, 2013</time></a>
 
 		<div class="e-content">
-			 <p style="text-align:center;"><img class=" aligncenter" alt="Off my grid" src="https://cdn.uploads.micro.blog/wp-content/151691/2013/10/img_1090.jpg" width="5027" height="2337" /></p>
+			 <p style="text-align:center;"><img class=" aligncenter" alt="Off my grid" src="http://therealadam.com/wp-content/uploads/2013/10/img_1090.jpg" width="5027" height="2337" /></p>
 Courtney regularly drives an hour southwest of Austin, past Dripping Springs, to practice dog agility at a barn her friend rents. It's amazingly quiet once you get past the city, past the backroads, and out into the hills and trees. It was an overcast evening when I went with her so the sunset was a no-show. Yet, the serenity and variety of it wasn't lost on me.
 
 		</div>
@@ -19960,7 +19962,7 @@ This is sort of like the <a title="http://www.threeriversinstitute.org/HitEmHigh
 
 		<div class="e-content">
 			 <p>Today&rsquo;s the hundredth anniversary of premier of hometown favorite Igor Stravinsky&rsquo;s <em>Rite of Spring</em>. The National Public Radios are all over this. <a href="http://www.npr.org/blogs/deceptivecadence/182844159/rite-of-spring">NPR Music</a> and <a href="http://www.wqxr.org/#station=q2!/series/rite-spring-fever/">WQXR</a> are collecting a bunch of articles they&rsquo;ve done in the run-up to the anniversary. My favorites: <a href="http://www.npr.org/blogs/deceptivecadence/2013/05/27/186461168/watch-a-mind-blowing-visualization-of-the-rite-of-spring">a visualization of the score</a> and a <a href="http://www.wqxr.org/#station=q2!/series/rite-spring-fever/">list of essential recordings</a>. The latter features this amazing image of Stravinsky, which I&rsquo;ve already posted twice today and will continue posting it until it just doesn&rsquo;t feel right anymore.</p>
-<p>[caption id=&quot;&quot; align=&ldquo;aligncenter&rdquo; width=&ldquo;312&rdquo;]<a href="http://therealadam.com/wp-content/uploads/2013/05/2strav.jpg"><img class=" wp-image " id="i-2962" alt="Igor Stravinsky in a giant coat, a hat, and sunglasses" src="https://cdn.uploads.micro.blog/wp-content/151691/2013/05/2strav.jpg?w=390" width="312" height="312" /></a> Indeed, Igor Stravinsky will be on that suit and tie.[/caption]</p>
+<p>[caption id=&quot;&quot; align=&ldquo;aligncenter&rdquo; width=&ldquo;312&rdquo;]<a href="http://therealadam.com/wp-content/uploads/2013/05/2strav.jpg"><img class=" wp-image " id="i-2962" alt="Igor Stravinsky in a giant coat, a hat, and sunglasses" src="http://therealadam.com/wp-content/uploads/2013/05/2strav.jpg?w=390" width="312" height="312" /></a> Indeed, Igor Stravinsky will be on that suit and tie.[/caption]</p>
 <p style="text-align:left">If you're playing along today, <a href="http://www.wqxr.org/#station=q2!/series/rite-spring-fever/">WQXR is streaming twenty-four hours of nothing but the Rite</a>. Highly recommended, if you have the means.</p>
 
 		</div>
@@ -20014,7 +20016,7 @@ Michael Nygard reflects on changes that increase and decrease the entropy of an 
 <p>More critically, you aren't beset with decision fatigue. You don't have to survey the landscape of helper gems and bolt-on approaches to writing Rails applications. You can start with the way Rails wants you to write applications: logic and data encapsulated in models, behavior encapsulated in controller actions, easy sharing of data between actions and views with instance variables, etc.</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"align":"center","id":2950,"style":{"color":[]}} -->
-<figure class="wp-block-image aligncenter"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/05/edgy.png" alt="A wingding" class="wp-image-2950" /></figure>
+<figure class="wp-block-image aligncenter"><img src="http://therealadam.com/wp-content/uploads/2013/05/edgy.png" alt="A wingding" class="wp-image-2950" /></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>You start with what Rails wants; when you find yourself violating one of Sandi's rules, <em>then</em> you apply design and refactoring techniques. If a model does too much, extract common behaviors into an encapsulated object. If a controller action knows about too many things, move that into an object and call it from the action. You can go a <em>really long way</em> using only the <a href="http://www.refactoring.com/catalog/replaceMethodWithMethodObject.html">Replace Method with Method Object</a> refactoring until you get to Kent Beck's notion of a <a href="http://c2.com/ppr/wiki/WikiPagesAboutRefactoring/ComposedMethod.html">Composed Method</a>.</p>
@@ -20029,7 +20031,7 @@ Michael Nygard reflects on changes that increase and decrease the entropy of an 
 <p><a href="http://robots.thoughtbot.com/post/50655960596/sandi-metz-rules-for-developers">Thoughtbot has written about what this looks like as it emerges</a>. It doesn't have to involve a lot of pattern names, new frameworks, framework asceticism or half-baked conventions. You write classes and methods when needed. When they get too big, you refactor, rinse, and repeat.</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"align":"center","id":2950} -->
-<figure class="wp-block-image aligncenter"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/05/edgy.png" alt="A wingding" class="wp-image-2950" /></figure>
+<figure class="wp-block-image aligncenter"><img src="http://therealadam.com/wp-content/uploads/2013/05/edgy.png" alt="A wingding" class="wp-image-2950" /></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Sandi's book, <a href="http://www.amazon.com/gp/product/0321721330/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=chamaxwoo-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321721330">Practical Object Oriented Design with Ruby</a>, is great not because it covers new territory or casts a new light on the subjects of object oriented programming and Ruby. It's great because it shows how to work with the tools provided by OO and Ruby. It's great because it shows how to go from less-good code to more-good code.</p>
@@ -20207,7 +20209,7 @@ The result: now my extracted class, <code>UserAuthentication</code> has meaning,
 
 		<div class="e-content">
 			 <p>I can&rsquo;t say enough good things about <a href="http://onstartups.com/tabid/3339/bid/97052/Screw-You-Joel-Spolsky-We-re-Rewriting-It-From-Scratch.aspx">How to Survive a Ground-Up Rewrite Without Losing Your Sanity</a>. Having been party to a few projects like this, a lot of this advice rings true to me. Let me quote you the good parts!</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/04/burndown.png" alt="Burndown" border="0" width="500" height="250" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2013/04/burndown.png" alt="Burndown" border="0" width="500" height="250" /></div>
 <p>You must identify the <em>business</em> value of the rewrite:</p>
 <p><blockquote>The key to fixing the "developers will cry less" thing is to identify, specifically, what the current, crappy system is holding you back from doing. E.g. are you not able to pass a security audit? Does the website routinely fall over in a way that customers notice? Is there some sexy new feature you just can't add because the system is too hard to work with? Identifying that kind of specific problem both means you're talking about something observable by the rest of the business, and also that you're in a position to make smart tradeoffs when things blow up (as they will).</blockquote></p>
 <p>The danger of unicorn rewrites:</p>
@@ -20241,7 +20243,7 @@ The result: now my extracted class, <code>UserAuthentication</code> has meaning,
 <p>Sometimes, I feel conditioned never to look beyond the first ten feet of the earth. Watch where you're going, don't run into things, avoid being eaten by bears. Modern life!</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"align":"center","id":2918,"sizeSlug":"large","className":"size-full wp-image-2918"} -->
-<figure class="wp-block-image aligncenter size-large size-full wp-image-2918"><img src="https://cdn.uploads.micro.blog/151691/2024/60acb244c8.jpg" alt="A Texas sunset" class="wp-image-2918" /><figcaption class="wp-element-caption">I see stuff like this out my office window every day. Be jealous.</figcaption></figure>
+<figure class="wp-block-image aligncenter size-large size-full wp-image-2918"><img src="uploads/2024/60acb244c8.jpg" alt="A Texas sunset" class="wp-image-2918" /><figcaption class="wp-element-caption">I see stuff like this out my office window every day. Be jealous.</figcaption></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>When I remind myself to look up, there’s so much great stuff. Trees, antennae, water towers, buildings. Airplanes, birds, superheroes. Never mind the visual pollution of smoke, contrails, and billboards. Nifty things, natural and man-made.</p>
@@ -20269,10 +20271,10 @@ The result: now my extracted class, <code>UserAuthentication</code> has meaning,
 		<div class="e-content">
 			 <p>There&rsquo;s a lot to say about programmer-focused software documentation. It&rsquo;s more crucial than many developers think, so it is often neglected. Even when its not neglected, it&rsquo;s often an after-thought. I&rsquo;ve noticed there are three kinds of documentation I&rsquo;m interested in.</p>
 <p>When I first come across some software, I want <strong>short and focused examples</strong> of how I can use it for my own purposes. I&rsquo;m not looking for a lot of theory or exposition; show me the benefit. If I can&rsquo;t <em>quickly</em> see how the software works and makes my life easier, I&rsquo;m very likely to discard it. In other words, I want shorter, &ldquo;tweet-sized&rdquo; documentation that sells me on the sizzle right away.</p>
-<div class="center"><img class="aligncenter" style="border: 0" src="https://cdn.uploads.micro.blog/wp-content/151691/2013/04/rbenv-readme.png" alt="rbenv's README" width="400" height="344" border="0" /></div>
+<div class="center"><img class="aligncenter" style="border: 0" src="http://therealadam.com/wp-content/uploads/2013/04/rbenv-readme.png" alt="rbenv's README" width="400" height="344" border="0" /></div>
 <a href="https://github.com/sstephenson/rbenv">rbenv</a>'s old README is a good example. I can see from the screenshot what using rbenv looks like. The bullet points make it easy to know the specifics of what this software is about.
 <p>If I come back to some software, I often want to <strong>learn the whole thing in one sitting</strong>. I want a longer document that I can read through in a <em>serial</em> fashion to learn most or all of the concepts and details about using the code. It should cover the domain ideas of the software, the individual APIs, and how it all works together to make something. To continue the metaphor, I want a well-written, &ldquo;Instapaper-length&rdquo; document worthy of reading in a comfy chair.</p>
-<div class="center"><img class="aligncenter" style="border: 0" src="https://cdn.uploads.micro.blog/wp-content/151691/2013/04/backbone.png" alt="Backbone.js homepage" width="260" height="678" border="0" /></div>
+<div class="center"><img class="aligncenter" style="border: 0" src="http://therealadam.com/wp-content/uploads/2013/04/backbone.png" alt="Backbone.js homepage" width="260" height="678" border="0" /></div>
 The <a href="http://documentcloud.github.io/backbone/">Backbone.js</a> homepage is great at serving as a long-form read. It serves as a reference document and guide at the same time.
 <p>After I start using something, I will often want to return to it to <strong>remember</strong> how to do specific things or to <strong>figure out</strong> if a task is possible at all. This is when I lean most on traditional API documentation. One to three paragraphs, easily searched are the ideal here. Kind of like the &ldquo;Tumblr-post&rdquo; of documentation.</p>
 <p>I&rsquo;ve yet to find all three of these qualities in the documentation for a single piece of software. Finding that software has done a really good job at one of them is delight enough. I can&rsquo;t imagine how excited the world, at large, would be if something were to have all three. There would be a lot of rejoicing.</p>
@@ -20373,7 +20375,7 @@ The <a href="http://documentcloud.github.io/backbone/">Backbone.js</a> homepage 
 
 		<div class="e-content">
 			 <p>A lot of the hypermedia philosophy is centered around the idea that API clients should work a lot like web browsers and plain-old Hypertext Markup Language. They should follow hyperlinks, leverage media types, cache data when they can, and intelligently take advantage of the meaning of hyperlinks whenever possible.</p>
-<img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/04/hypermediachickenegg.jpg?w=525" alt="Good APIs require good services *and* good clients" width="525" height="173" class="aligncenter size-large wp-image-2891" />
+<img src="http://therealadam.com/wp-content/uploads/2013/04/hypermediachickenegg.jpg?w=525" alt="Good APIs require good services *and* good clients" width="525" height="173" class="aligncenter size-large wp-image-2891" />
 <p>The problem with that is, <strong>web browsers are way more capable than HTTP clients</strong> developers are using to build API clients with.</p>
 <p>Here are some things web browsers have become pretty good at:</p>
 <ul><li>GET and POST requests
@@ -20406,7 +20408,7 @@ The <a href="http://documentcloud.github.io/backbone/">Backbone.js</a> homepage 
 			 <p><em>Saturday Night Live</em> is a changing thing. It&rsquo;s not new like it was in the seventies, it&rsquo;s not a powerhouse like it was in the nineties, it may not be the training camp for NBC sitcoms anymore. Despite that, its still a big dog in the worlds of comedy and pop culture. Every time I hear or read &ldquo;<em>SNL</em> was better when…&rdquo;, I cringe a little. As far as I can tell, this isn&rsquo;t true.</p>
 <p>Everyone&rsquo;s got their favorite cast. Ferrell/Shannon/Sanz/Oteri, Fey/Poehler/Rudolph, Hartman/Carvey/Myers. It seems largely to depend on whenever you started watching SNL or when you were a teenager or in college. So when someone says &ldquo;SNL isn&rsquo;t relevant any more&rdquo;, I mentally substitute &ldquo;I liked SNL better with the cast I watched first.&rdquo;</p>
 <p>Over the years of watching and reading about SNL, I&rsquo;ve come to understand that the show is very much about the people on camera, but Lorne Michaels <strong>is</strong> the show. The only time the show has been in consistent decline was when Michaels wasn&rsquo;t around in the early eighties. For the past thirty years, claiming SNL was on the down seems to be more of a sport than a rational argument.</p>
-<p>Since Michaels' return, the show is subject to fractal cycles. Each night, some skits kill and some skits bomb. Generally, the front of the show is better than the back; if you stay tuned after &ldquo;Weekend Update&rdquo;, you should count yourself a long-time fan, willing to see some weird and/or flat skits, or asleep on the couch.</p>
+<p>Since Michaels&rsquo; return, the show is subject to fractal cycles. Each night, some skits kill and some skits bomb. Generally, the front of the show is better than the back; if you stay tuned after &ldquo;Weekend Update&rdquo;, you should count yourself a long-time fan, willing to see some weird and/or flat skits, or asleep on the couch.</p>
 <p>If you zoom out to look at how a season flows, you&rsquo;ll again find shows that are really great and some that aren&rsquo;t. My theory is that this entirely depends on the quality of the host. A mediocre host seems to bring middling material out of the writers and performers. A good or high-profile host seems to bring good-but-not-great material and pretty good performances. One of the darling hosts, like Alec Baldwin and the more recent Jon Hamm, brings the A-game material from the writers and performers play up to the occasion.</p>
 <p>Interestingly, musical guests can bring a certain electricity too. Paul Rudd is a capable host, but pairing him with Paul McCartney led to a show that was pretty electric. I defy you to watch that episode and tell me SNL just isn&rsquo;t as good as it used to be.</p>
 <p>Zooming out to look at successive seasons, you see the same sort of up-and-down. Will Ferrell&rsquo;s first season was good, but not great. He definitely left at his sketch comedy peak, and the show was briefly weaker for it. But right on his heels came the Fey/Poehler/Rudolph powerhouse. There&rsquo;s an ebb and flow as casts come together, hammer out a few good seasons, and then move on to other stages.</p>
@@ -20448,7 +20450,7 @@ The <a href="http://documentcloud.github.io/backbone/">Backbone.js</a> homepage 
 <p>If you zoom way out, a single core, dual cores, and a single hyperthreaded core look like this:</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"linkDestination":"custom"} -->
-<figure class="wp-block-image"><a href="https://cdn.uploads.micro.blog/wp-content/151691/2013/02/20130216-134550.jpg"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/02/20130216-134550.jpg" alt="20130216-134550.jpg" /></a></figure>
+<figure class="wp-block-image"><a href="http://therealadam.com/wp-content/uploads/2013/02/20130216-134550.jpg"><img src="http://therealadam.com/wp-content/uploads/2013/02/20130216-134550.jpg" alt="20130216-134550.jpg" /></a></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Note how the hyperthreaded core is really a single core with an extra set of registers and instruction/stack pointers. The reason hyperthreading is a lie is <em>you can't actually run four processes, or even four threads, at the same time</em>. At best, you can run two threads with two others ready in the wings.</p>
@@ -20457,7 +20459,7 @@ The <a href="http://documentcloud.github.io/backbone/">Backbone.js</a> homepage 
 <p>I'm a dilletante of processor architecture at best, but I think I can explain why chip designers would do this.</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"linkDestination":"custom"} -->
-<figure class="wp-block-image"><a href="https://cdn.uploads.micro.blog/wp-content/151691/2013/02/20130216-134900.jpg"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/02/20130216-134900.jpg" alt="20130216-134900.jpg" /></a></figure>
+<figure class="wp-block-image"><a href="http://therealadam.com/wp-content/uploads/2013/02/20130216-134900.jpg"><img src="http://therealadam.com/wp-content/uploads/2013/02/20130216-134900.jpg" alt="20130216-134900.jpg" /></a></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>My best guess as to why you would design and release a hyperthreaded core is to increase the number of instructions you can retire (i.e. mark as completely executed) per clock cycle. Instructions retired per cycle is one of the primary metrics processor architects use for judging a design.</p>
@@ -20661,7 +20663,7 @@ The <a href="http://documentcloud.github.io/backbone/">Backbone.js</a> homepage 
 		<div class="e-content">
 			 <p>I use Alfred because I believe that my computer should be practically unusable to other people who try to use it. My goal is to put the things I use frequently close at hand. Conversely, the things I use rarely should be accessible without cluttering my most common workflows.</p>
 <p>Last week, I came up with a way to bring the two or three applications I use <em>all the time</em> very close to hand. Ladies and gentlemen, I present to you the double tap:</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2013/03/alfred.png" alt="Alfred Preferences" border="0" width="894" height="702" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2013/03/alfred.png" alt="Alfred Preferences" border="0" width="894" height="702" /></div>
 <p>Since I use VIM inside a terminal several hours a day, I want really quick access to iTerm 2. My thumb just happens to sit near the command key all day. Ergo, assigning a key to quickly switch to the terminal makes a lot of sense.</p>
 <p>But it gets even better! Alfred knows about double-taps of the control, alt, and command keys. So you can assign an application to each of those keys and <em>really quickly</em> switch back and forth between them. It&rsquo;s pretty rad.</p>
 <p>My experience is that this works exactly how I&rsquo;d want it to 80% of the time. A couple times a day, I will start to chord a different key combo and mysteriously end up in iTerm. It&rsquo;s not disruptive, just a little odd at first, and I keep going about my business.</p>
@@ -20976,12 +20978,12 @@ end</code>
 
 		<div class="e-content">
 			 <p style="text-align:left">The rap game doesn't have to be all posturing and diss tracks. <a href="http://okayplayer.tumblr.com/post/36811210842/we-need-more-smiling-rappers-tbt-theroots">We need more smiling rappers.</a></p>
-<p style="text-align:left"><a href="http://okayplayer.tumblr.com/post/36811210842/we-need-more-smiling-rappers-tbt-theroots"><img alt="" src="https://cdn.uploads.micro.blog/wp-content/151691/2012/12/tumblr_me99ijpkgk1qm7fxao1_500.jpg" /></a></p>
+<p style="text-align:left"><a href="http://okayplayer.tumblr.com/post/36811210842/we-need-more-smiling-rappers-tbt-theroots"><img alt="" src="http://therealadam.com/wp-content/uploads/2012/12/tumblr_me99ijpkgk1qm7fxao1_500.jpg" /></a></p>
 <p style="text-align:left">
 </p>
 <p style="text-align:left"><img class="alignnone" alt="" src="http://www.omega-level.net/wp-content/uploads/2012/09/jay-z-laugh-e1348848394860.jpg" width="352" height="211" /><img class="alignnone" alt="" src="http://stevekaczynski.com/wp-content/uploads/2012/01/ICe-Cube-fishing-pole.jpg" width="575" height="356" /></p>
 <p style="text-align:left"> <img class="alignnone" alt="" src="http://20.media.tumblr.com/A2WlZa8ryjhtned1uyYC62Sqo1_500.jpg" width="500" height="525" /></p>
-<p style="text-align:left"><img class="alignnone" alt="" src="http://www2.pictures.zimbio.com/gi/HOT+97+Metro+PCS+5+Boro+Takeover+Tour+Wu+Massacre+jcevj2Wudljl.jpg" width="594" height="457" /><img class="alignnone" alt="" src="http://www.bet.com/news/music/2011/05/09/ll-cool-j-rep-dismisses-allegations-of-transexual-encounter/_jcr_content/featuredMedia/newsitemimage.newsimage.dimg/050911-music-ll-cool-j-laughing.jpg" width="628" height="353" /><img class="alignnone" alt="" src="https://cdn.uploads.micro.blog/wp-content/151691/2012/12/mosdef.jpg?w=194" width="353" height="545" /></p>
+<p style="text-align:left"><img class="alignnone" alt="" src="http://www2.pictures.zimbio.com/gi/HOT+97+Metro+PCS+5+Boro+Takeover+Tour+Wu+Massacre+jcevj2Wudljl.jpg" width="594" height="457" /><img class="alignnone" alt="" src="http://www.bet.com/news/music/2011/05/09/ll-cool-j-rep-dismisses-allegations-of-transexual-encounter/_jcr_content/featuredMedia/newsitemimage.newsimage.dimg/050911-music-ll-cool-j-laughing.jpg" width="628" height="353" /><img class="alignnone" alt="" src="http://therealadam.com/wp-content/uploads/2012/12/mosdef.jpg?w=194" width="353" height="545" /></p>
 <p style="text-align:left">OK, maybe one of those is not like the others, but, ya heard?</p>
 		</div>
 	  </div>
@@ -21826,7 +21828,7 @@ end
 		<a href="https://therealadam.com/2012/09/01/my-inner-dialog.html" class="u-url"><time class="dt-published" datetime="2012-09-01 17:42:55 -0700">Sep 1, 2012</time></a>
 
 		<div class="e-content">
-			 <p><img src="https://cdn.uploads.micro.blog/wp-content/151691/2012/09/iterm.png" alt="My inner dialog while coding" class="size-full wp-image-2402" /><p>I&rsquo;m a bit of a sailor when I&rsquo;m wrangling my own creations.</p></p>
+			 <p><img src="http://therealadam.com/wp-content/uploads/2012/09/iterm.png" alt="My inner dialog while coding" class="size-full wp-image-2402" /><p>I&rsquo;m a bit of a sailor when I&rsquo;m wrangling my own creations.</p></p>
 
 		</div>
 	  </div>
@@ -22628,7 +22630,7 @@ All that said, as I was writing this post up, some shortcomings in this example 
 </ul>
 <p>I&#8217;m not sure if any of these will prove reliable finishers. Your mileage may vary.</p>
 <p>Here&#8217;s my desktop folder. I shoved all my previously unfinished projects in another folder and wiped the slate clean. </p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2012/06/gameon.png" alt="A cleanish slate. Game, on." border="0" width="234" height="282" /></div><p>Game on.</p>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2012/06/gameon.png" alt="A cleanish slate. Game, on." border="0" width="234" height="282" /></div><p>Game on.</p>
 
 		</div>
 	  </div>
@@ -22923,15 +22925,15 @@ end
 			 <p>Every program, library, framework, and application needs documentation of some sort; this much is uncontroversial. How much documentation, what kinds of documentation, and where to put that documentation are the questions that often elicit endless prognostication.</p>
 <p>When it comes to documentation aimed at developers, there&rsquo;s a spectrum. On one end, there&rsquo;s zero documentation, only code. On the other end of the spectrum, are literate programs; the code is intertwined with the documentation and the language is equally geared towards marking up a document and translating ideas into machine executable code.</p>
 <p>Somewhere along this spectrum exists a happy ideal for most programmers. Inline API docs ala JavaDoc, RDoc, and <a href="http://yardoc.org/">YARD</a> have been popular for a while. Lately, tools like <a href="http://jashkenas.github.com/docco/">docco</a> and <a href="http://rtomayko.github.com/rocco/">rocco</a> have raised enthusiasm for &ldquo;semi-literate programming&rdquo;. There&rsquo;s also a lot of potential in <a href="https://www.relishapp.com/myronmarston/vcr/docs">projects exhaustively documenting themselves in their Cucumber features as vcr does</a>.</p>
-<p>All of these tools couple code with documentation, per the notion that putting them right next to each other makes it more likely documentation gets updated in sync with the code. The downside to this approach is that code gets &lsquo;noised up&rsquo; with comments. Often this is a fair trade, but it occasionally makes navigating a file cumbersome.</p>
+<p>All of these tools couple code with documentation, per the notion that putting them right next to each other makes it more likely documentation gets updated in sync with the code. The downside to this approach is that code gets &rsquo;noised up&rsquo; with comments. Often this is a fair trade, but it occasionally makes navigating a file cumbersome.</p>
 <p>It happens that Unix, in its age-old sage ways, has been storing its docs out-of-line with the relevant code for years. They&rsquo;re called manpages, and they mostly don&rsquo;t suck. Every C API on a modern Unix has a corresponding manpage that describes the relevant functions and structures, how to use it, and any bugs that may exist. They&rsquo;re actually a pretty good source of info.</p>
 <p>Scene change.</p>
 <p>It so happens that Ryan Tomayko is a Unix afficionado and wrote a tool that is even better for writing manpages than the original Unix tooling. It&rsquo;s called <a href="http://rtomayko.github.com/ronn/">ronn</a>, and it&rsquo;s pretty rad; you write Markdown, and you get bonafide UNIX manpages plus manpage-styled HTML.</p>
 <p>Perhaps this is a useful way to write programmer-focused docs. Keep docs out of the code, put it in manpages instead, push it to GitHub pages. Code stays focused, docs still look great.</p>
 <p>I took <a href="https://github.com/jnunemaker/scam">John Nunemaker&rsquo;s scam</a> gem and put this idea to the test. Here&rsquo;s what the manpage looks like, with the default styling provided by ronn:</p>
-<img src="https://therealadam-ng.micro.blog/uploads/2024/5796b22c28.jpg" style="width: auto" alt="The manage for scam">
+<img src="uploads/2024/5796b22c28.jpg" style="width: auto" alt="The manage for scam">
 <p>Here&rsquo;s the raw ronn document:</p>
-<p><a href="https://github.com/therealadam/scam/blob/master/man/scam.1.ronn"><img src="https://therealadam-ng.micro.blog/uploads/2024/b24b4f01bf.jpg" style="width: auto" alt="Eat a plain-text sandwich"></a></p>
+<p><a href="https://github.com/therealadam/scam/blob/master/man/scam.1.ronn"><img src="uploads/2024/b24b4f01bf.jpg" style="width: auto" alt="Eat a plain-text sandwich"></a></p>
 <p><a href="https://github.com/therealadam/scam/blob/master/man/scam.1.ronn">No Ruby files were harmed</a> in the making of <a href="http://therealadam.github.com/scam/scam.1.html">this documentation</a>.</p>
 <p>It took me about ninety minutes to put this together. Probably 33-50% of that time was simply tinkering with ronn and making sure I was writing in the style that is typical of manpages. So we&rsquo;re talking about forty-five minutes to document a mixin with seven methods. For pretty good looking output and simple tooling, that&rsquo;s a very modest investment.</p>
 <p>The potential drawbacks are the same as any kind of documentation; it could fall out-of-sync with the production code. Really, I think this is more of a workflow issue. Ideally, every commit or merged branch is reviewed to make sure that relevant docs are updated. As a baseline, the release workflow for a project should include a step to make sure docs are up-to-date.</p>
@@ -22978,7 +22980,7 @@ end
 		<a href="https://therealadam.com/2012/02/18/automated-code-goodness.html" class="u-url"><time class="dt-published" datetime="2012-02-18 21:43:22 -0700">Feb 18, 2012</time></a>
 
 		<div class="e-content">
-			 <p><a href="https://gist.github.com/1862005"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2012/02/cane.png" alt="A script to run cane in a project" title="cane" width="453" height="222" class="aligncenter size-full wp-image-2111" /></a></p>
+			 <p><a href="https://gist.github.com/1862005"><img src="http://therealadam.com/wp-content/uploads/2012/02/cane.png" alt="A script to run cane in a project" title="cane" width="453" height="222" class="aligncenter size-full wp-image-2111" /></a></p>
 <p>A few nights ago, I <a href="https://gist.github.com/1862005">added</a> Xavier Shay&rsquo;s <a href="https://github.com/square/cane">cane</a> to <a href="https://sifterapp.com/">Sifter</a>. It was super simple, and cane runs surprisingly <em>fast</em>. Cane is designed to run as part of CI, but Sifter doesn&rsquo;t really an actual CI box. Instead, I&rsquo;ve added it to our preflight script that tells us whether deploying is a good idea or not, based on our spec suite. Now that preflight can tell us if we&rsquo;ve regressed on code complexity or style as well. I&rsquo;m pretty pumped about this setup.</p>
 <p>Next step: add glib comments on failure. I&rsquo;m thinking of something like &ldquo;Yo, imma let you finish but the code you&rsquo;re about to deploy is not that great.&rdquo;</p>
 
@@ -23273,7 +23275,7 @@ end</code></pre>
 
 		<div class="e-content">
 			 <p><a href="http://www.npr.org/blogs/money/2011/12/22/144139101/the-year-in-4-charts?sc=tw&amp;cc=share">The Year In 4 Charts</a>: Planet Money does an excellent job collecting four economic charts (themselves chosen from three collections of best-of charts). I&rsquo;m a dilettante as far as economics and economics go, but these charts do a great job of rolling up what seemed to have been the essential stories of the year.</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2011/12/spendingandrevenues_custom.jpg" alt="Spendingandrevenues custom" border="0" width="462" height="347" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2011/12/spendingandrevenues_custom.jpg" alt="Spendingandrevenues custom" border="0" width="462" height="347" /></div>
 <p>A picture can nullify a thousand talking points, no?</p>
 
 		</div>
@@ -24222,7 +24224,7 @@ Fun fact: this post is in fact a yak shave extracted from a post on yak shaving.
 
 		<div class="e-content">
 			 <p>Anyone else remember uploading screenshots of their super awesome, tweaked out Linux hacker desktops?</p>
-<div class="center"><a href="https://cdn.uploads.micro.blog/wp-content/151691/2011/04/screenshothacking.png"><img style="border:0 initial initial;" src="https://cdn.uploads.micro.blog/wp-content/151691/2011/04/screenshothacking.png" border="0" alt="Screenshot whilst hacking" width="600" height="375" /></a></div>
+<div class="center"><a href="http://therealadam.com/wp-content/uploads/2011/04/screenshothacking.png"><img style="border:0 initial initial;" src="http://therealadam.com/wp-content/uploads/2011/04/screenshothacking.png" border="0" alt="Screenshot whilst hacking" width="600" height="375" /></a></div>
 Sorry, I'm not running WindowMaker, Enlightenment, or Sawmill anymore. Besides that, I think I have all the cliches: terminal, editor, MP3 player, system monitors, blinkenlights, etc. I am missing an IRC session, though.
 
 		</div>
@@ -24274,7 +24276,7 @@ Work on an app with a couple dozen servers, a handful of databases, and several 
 		<a href="https://therealadam.com/2011/04/01/im-corgiinternet-famous.html" class="u-url"><time class="dt-published" datetime="2011-04-01 07:10:27 -0700">Apr 1, 2011</time></a>
 
 		<div class="e-content">
-			 <p><a href="http://corgiaddict.com/post/4243283130/kitty-putting-the-moves-on-my-man-submitted"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2011/04/tumblr_lixys6tj3d1qbwakso1_500.jpg" alt="Me + Kitty" /></a></p>
+			 <p><a href="http://corgiaddict.com/post/4243283130/kitty-putting-the-moves-on-my-man-submitted"><img src="http://therealadam.com/wp-content/uploads/2011/04/tumblr_lixys6tj3d1qbwakso1_500.jpg" alt="Me + Kitty" /></a></p>
 <p><a href="http://corgiaddict.com/post/4243283130/kitty-putting-the-moves-on-my-man-submitted">OCD: Obsessive Corgi Disorder, Kitty putting the moves on my man</a>. Also on <a href="http://menandtheirdogs.tumblr.com/#4243965959">Men and their dogs</a>. I&rsquo;m corgi-internet famous! Photo by <a href="http://courtneypo.com">Courtney</a>.</p>
 
 		</div>
@@ -24344,7 +24346,7 @@ Work on an app with a couple dozen servers, a handful of databases, and several 
 
 		<div class="e-content">
 			 <p>From my notebook:</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2011/03/img_0203.jpg" border="0" alt="Monster" width="600" height="450" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2011/03/img_0203.jpg" border="0" alt="Monster" width="600" height="450" /></div>
 I don't recall what I was working on the time, but it seems that the interaction between many Gowalla models loading from cache via a  <code>get</code> class method and something about memcached was causing enough trouble to drive me to draw a little monster.
 
 		</div>
@@ -25586,7 +25588,7 @@ I think that many of the NoSQL crowd either fail to either recognize, or to prop
 		<a href="https://therealadam.com/2009/09/10/ipod-spaceman.html" class="u-url"><time class="dt-published" datetime="2009-09-10 05:54:47 -0700">Sep 10, 2009</time></a>
 
 		<div class="e-content">
-			 <div class="contentcolumn aligncenter"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/09/ipodspaceman.jpg" alt="ipodspaceman.jpg" border="0" width="488" height="488" align="right" /></div>
+			 <div class="contentcolumn aligncenter"><img src="http://therealadam.com/wp-content/uploads/2009/09/ipodspaceman.jpg" alt="ipodspaceman.jpg" border="0" width="488" height="488" align="right" /></div>
 <p>(With due apologies to the creators of <a href="http://www.morenewmath.com/">New Math</a>, the writers of 30 Rock and the lovely iPod people.)</p>
 
 		</div>
@@ -25749,7 +25751,7 @@ Politicians should tone down the rhetoric. Protesters should read some history b
 <p>h2. Try it out</p>
 <p>To get started with <a href="http://tagbetter.r09.railsrumble.com/">Tag Better</a>, you&rsquo;ll first need to log in with your Delicious username and password (more on that in a moment.)</p>
 <div class="contentcolumn alignright">
-<img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/08/tag-better-e28093-makes-delicious-tagging-better.png" alt="Tag Better – Makes Delicious Tagging Better.png" border="0" width="250" />
+<img src="http://therealadam.com/wp-content/uploads/2009/08/tag-better-e28093-makes-delicious-tagging-better.png" alt="Tag Better – Makes Delicious Tagging Better.png" border="0" width="250" />
 </div>
 <p>Once you&rsquo;re logged in, you&rsquo;ll see your tag bundles on the left and all your tags on the right. If you click a bundle, the tags that are included in that bundle are highlighted. Clicking a tag toggles its inclusion in the bundle. Changes in <a href="http://tagbetter.r09.railsrumble.com/">Tag Better</a> are immediately reflected in Delicious.</p>
 <p>That&rsquo;s the core interaction. You can also logout, of course. And, if you feel the need, we offer a way to remove your bundle and tag data from our system&rsquo;s caches.</p>
@@ -25937,8 +25939,8 @@ Throughout the 1940s and 50s, as automobile use became prolific in the United St
 		<div class="e-content">
 			 <p><a href="http://minimalmac.com/post/159796749/the-menubar-challenge">The Menubar Challenge</a> - everybody, clear out your menubars! It&rsquo;s one of my secret productivity weapons, I highly recommend it. Also, read everything on <a href="http://minimalmac.com">Minimal Mac</a>; it&rsquo;s the best.</p>
 <p>Here&rsquo;s my current attempt to use as little as possible in my menubar:</p>
-<div class="aligncenter"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/08/os-x-menubar.png" alt="OS X menubar.png" border="0" width="303" height="44" /></div>
-<p>LittleSnapper normally isn&rsquo;t running, so that doesn&rsquo;t count. If I could, I would run DropBox and FastScripts without menubar icons. I&rsquo;m still not sure I like having a clock visible at all times, but at least analog clocks are classy-lookin'. I&rsquo;d love to remove the battery icon, but it appears doing so disables the &ldquo;your battery is tapped&rdquo; warnings, leading to spontaneous laptop sleeping.</p>
+<div class="aligncenter"><img src="http://therealadam.com/wp-content/uploads/2009/08/os-x-menubar.png" alt="OS X menubar.png" border="0" width="303" height="44" /></div>
+<p>LittleSnapper normally isn&rsquo;t running, so that doesn&rsquo;t count. If I could, I would run DropBox and FastScripts without menubar icons. I&rsquo;m still not sure I like having a clock visible at all times, but at least analog clocks are classy-lookin&rsquo;. I&rsquo;d love to remove the battery icon, but it appears doing so disables the &ldquo;your battery is tapped&rdquo; warnings, leading to spontaneous laptop sleeping.</p>
 
 		</div>
 	  </div>
@@ -26614,7 +26616,7 @@ The fact is, for a lot of these applications, it&rsquo;s just data. The ceremony
 		<a href="https://therealadam.com/2009/03/30/think.html" class="u-url"><time class="dt-published" datetime="2009-03-30 07:30:18 -0700">Mar 30, 2009</time></a>
 
 		<div class="e-content">
-			 <div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/03/tn-213blues-brothers-155.jpg" alt="tn_213BLUES_BROTHERS-155.jpg" border="0" width="400" height="225" /></div>
+			 <div class="center"><img src="http://therealadam.com/wp-content/uploads/2009/03/tn-213blues-brothers-155.jpg" alt="tn_213BLUES_BROTHERS-155.jpg" border="0" width="400" height="225" /></div>
 <p>The scene in <em>The Blues Brothers</em> where they are recruiting Matt &ldquo;Guitar&rdquo; Murphy is quite possibly my favorite of the movie. From the start of &ldquo;Think&rdquo; to the first &ldquo;Freedom!&rdquo; chorus, I get all sorts of musical tingles. I highly recommend it, if you have the means.</p>
 <p>Since I can&rsquo;t link to any video of the scene, why not listen to <a href="http://www.youtube.com/watch?v=UVoR985G8ng">&ldquo;Freedom&rdquo;</a> by Charles Mingus. It&rsquo;s goodness.</p>
 
@@ -26739,7 +26741,7 @@ It's a programmer's biggest strength when he knows what he doesn't need to know.
 		<a href="https://therealadam.com/2009/03/19/rubinius-threads-for.html" class="u-url"><time class="dt-published" datetime="2009-03-19 07:09:23 -0700">Mar 19, 2009</time></a>
 
 		<div class="e-content">
-			 <p>A no non-sense, non-academic introduction to <a href="http://blog.brightredglow.com/2009/3/18/a-vm-by-any-other-name">how Rubinius' threading is structured</a>. Having read a few papers on VM implementation lately, this is refreshingly direct and easy-to-read.</p>
+			 <p>A no non-sense, non-academic introduction to <a href="http://blog.brightredglow.com/2009/3/18/a-vm-by-any-other-name">how Rubinius&rsquo; threading is structured</a>. Having read a few papers on VM implementation lately, this is refreshingly direct and easy-to-read.</p>
 
 		</div>
 	  </div>
@@ -26872,7 +26874,7 @@ It's a programmer's biggest strength when he knows what he doesn't need to know.
 
 		<div class="e-content">
 			 <p>Last night at <a href="http://cohabitat.us/">Cohabitat</a>, <a href="http://www.flickr.com/photos/theagencyblog/sets/72157613677956518/show/">we did some lightning talks</a>. The prompt was &ldquo;What I&rsquo;m Thinking&rdquo;. I decided to take a cross-section of topics I&rsquo;ve been immersing myself in lately. And of course, every good talk needs a gimmick, so I went with some of the fantastic shows on television right now. Here&rsquo;s a map of the topic:</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/02/whatimthinkingsmall.jpg" alt="WhatImThinkingSmall.jpg" border="0" width="450" height="353" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2009/02/whatimthinkingsmall.jpg" alt="WhatImThinkingSmall.jpg" border="0" width="450" height="353" /></div>
 <p>And here&rsquo;s a video of my talk:</p>
 <div class="center">
 <br /><a href="http://vimeo.com/3187172">What I'm Thinking</a> from <a href="http://vimeo.com/therealadam">Adam Keys</a> on <a href="http://vimeo.com">Vimeo</a>.
@@ -27150,7 +27152,7 @@ It's a programmer's biggest strength when he knows what he doesn't need to know.
 		<div class="e-content">
 			 <p><a href="http://jstn.cc/post/69640140">Justin Ouellette</a>:</p>
 <blockquote>When these have all been taken down it's ready to go.</blockquote>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/01/u8ugxloitikdl2x7hmec0e3ao1-400.jpg" alt="u8UGxloitikdl2x7HMeC0e3ao1_400.jpg" border="0" width="400" height="534" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2009/01/u8ugxloitikdl2x7hmec0e3ao1-400.jpg" alt="u8UGxloitikdl2x7HMeC0e3ao1_400.jpg" border="0" width="400" height="534" /></div>
 
 		</div>
 	  </div>
@@ -27206,7 +27208,7 @@ It's a programmer's biggest strength when he knows what he doesn't need to know.
 
 		<div class="e-content">
 			 <p>I saw this last week (really!), but it appears the &ldquo;blogger embargo&rdquo; was broken on Sunday, so here goes.</p>
-<p>&ldquo;Microsoft Research released an app&rdquo;:<a href="http://research.microsoft.com/en-us/um/redmond/projects/songsmith/">research.microsoft.com/en-us/um/&hellip;</a> that lets you sing along to a drumbeat and then it generates music to match your singing. Many moons ago, an acappella version of &ldquo;Runnin' with the devil&rdquo; made it&rsquo;s way on to the internet. Some brilliant joker used the former on the latter and you get: <a href="http://music.metafilter.com/2943/Runnin-With-The-Songsmith">something that&rsquo;s just not quite right</a>. It&rsquo;s especially interesting how the software tries very hard to accommodate David Lee Roth&rsquo;s off-beat entrances.</p>
+<p>&ldquo;Microsoft Research released an app&rdquo;:<a href="http://research.microsoft.com/en-us/um/redmond/projects/songsmith/">research.microsoft.com/en-us/um/&hellip;</a> that lets you sing along to a drumbeat and then it generates music to match your singing. Many moons ago, an acappella version of &ldquo;Runnin&rsquo; with the devil&rdquo; made it&rsquo;s way on to the internet. Some brilliant joker used the former on the latter and you get: <a href="http://music.metafilter.com/2943/Runnin-With-The-Songsmith">something that&rsquo;s just not quite right</a>. It&rsquo;s especially interesting how the software tries very hard to accommodate David Lee Roth&rsquo;s off-beat entrances.</p>
 <p>In my opinion, the &ldquo;DLR soundboard&rdquo;:<a href="http://www.thetyser.com/">www.thetyser.com</a> and the &ldquo;Roth Alarm&rdquo;:<a href="http://rothalarm.ytmnd.com/">rothalarm.ytmnd.com</a> are even better uses of the source material.</p>
 
 		</div>
@@ -27252,7 +27254,7 @@ It's a programmer's biggest strength when he knows what he doesn't need to know.
 		<a href="https://therealadam.com/2009/01/12/bill-burcham-does.html" class="u-url"><time class="dt-published" datetime="2009-01-12 11:38:50 -0700">Jan 12, 2009</time></a>
 
 		<div class="e-content">
-			 <div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/01/burcham-desk.jpg" alt="burcham_desk.jpg" border="0" width="500" height="666" /></div>
+			 <div class="center"><img src="http://therealadam.com/wp-content/uploads/2009/01/burcham-desk.jpg" alt="burcham_desk.jpg" border="0" width="500" height="666" /></div>
 <p>Where <a href="http://thoughtpropulsion.com/">Bill</a> <a href="http://memerocket.com/">Burcham</a> <a href="http://wherewedowhatwedo.com/spaces/1244-bill-burcham">does what he does</a>.</p>
 
 		</div>
@@ -27312,7 +27314,7 @@ It's a programmer's biggest strength when he knows what he doesn't need to know.
 		<a href="https://therealadam.com/2009/01/09/heat-dissipation-tower.html" class="u-url"><time class="dt-published" datetime="2009-01-09 10:00:01 -0700">Jan 9, 2009</time></a>
 
 		<div class="e-content">
-			 <div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2009/01/219f0be5b7c2d07260ed8ad49661db197d79622b-m.jpg" alt="219f0be5b7c2d07260ed8ad49661db197d79622b_m.jpg" border="0" width="464" height="480" /></div>
+			 <div class="center"><img src="http://therealadam.com/wp-content/uploads/2009/01/219f0be5b7c2d07260ed8ad49661db197d79622b-m.jpg" alt="219f0be5b7c2d07260ed8ad49661db197d79622b_m.jpg" border="0" width="464" height="480" /></div>
 <p>Via <a href="http://ffffound.com/image/219f0be5b7c2d07260ed8ad49661db197d79622b">ffffound</a>.</p>
 
 		</div>
@@ -27875,7 +27877,7 @@ You are a bell curve.
 		<a href="https://therealadam.com/2008/09/13/you-need-more.html" class="u-url"><time class="dt-published" datetime="2008-09-13 15:00:09 -0700">Sep 13, 2008</time></a>
 
 		<div class="e-content">
-			 <p>Lyle Lovett is quite possibly one of Texas' finest exports. If you&rsquo;re not hip then you&rsquo;re missing out. Heck, I was missing out; consider a couple of his appearances on the Johnny Carson show.</p>
+			 <p>Lyle Lovett is quite possibly one of Texas&rsquo; finest exports. If you&rsquo;re not hip then you&rsquo;re missing out. Heck, I was missing out; consider a couple of his appearances on the Johnny Carson show.</p>
 <div class="center">
 [youtube=[www.youtube.com/watch](http://www.youtube.com/watch?v=5iHI2-SEdh4&amp;hl=en&amp;fs=1])
 </div>
@@ -27910,7 +27912,7 @@ You are a bell curve.
 </li>
 </ul>
 <p>I can see how following interesting folks on Twitter and reading aggregators occasionally can you get you some of this, but not all of it. With sources like <a href="http://www.reddit.com/">Reddit</a> or <a href="http://news.ycombinator.com/">Hacker News</a>, signal to noise is a problem - you can&rsquo;t control who posts what. Some people have a lot of extra angst and/or spare time. Which is also the other side of the Twitter story. Some people are great to read, but a pain to put up with at times. So it goes.</p>
-<p>When Chris' essay first hit the wires, I was tempted to adopt his ways. But, I think I&rsquo;m pretty good at ignoring the need to unbold things and cut down to business. What has proved immensely useful to me was has encouragement to just code all the time and make lots of stuff. I&rsquo;m just getting started with this, but already I&rsquo;m liking the increased feeling of accomplishment.</p>
+<p>When Chris&rsquo; essay first hit the wires, I was tempted to adopt his ways. But, I think I&rsquo;m pretty good at ignoring the need to unbold things and cut down to business. What has proved immensely useful to me was has encouragement to just code all the time and make lots of stuff. I&rsquo;m just getting started with this, but already I&rsquo;m liking the increased feeling of accomplishment.</p>
 <p>Regardless, we could all probably stand to trim our feed lists and hunker down on our projects, no?</p>
 
 		</div>
@@ -27959,7 +27961,7 @@ You are a bell curve.
 
 		<div class="e-content">
 			 <p><a href="http://therealadam.com/archive/2008/08/29/railsconf-europe-here-i-come/">Like I said</a>, I think the market for simple applications is probably saturated and now is the time for Ruby and Rails to go up-market and tackle bigger problems. We&rsquo;re well equipped to do that, having learned from what sorts of simplicity help reduce tricky problems to tractable problems.</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/09/iheartcomplexity.jpg" alt="IHeartComplexity.jpg" border="0" width="480" height="432" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2008/09/iheartcomplexity.jpg" alt="IHeartComplexity.jpg" border="0" width="480" height="432" /></div>
 <p>In my RailsConf Europe 2008 presentation, I play the role of the messenger. I&rsquo;m not bringing any new science that makes building more involved applications easier. Instead, I&rsquo;m trying to tie it together into an understandable package. You take the gems described herein (money, acts_as_state_machine and acts_as_versioned) and a couple concepts (domain driven design and queueing) and you can build some really cool applications that solve pretty tricky problems. To me, that&rsquo;s big fun.</p>
 <p>You can <a href="http://www.slideshare.net/therealadam/i-heart-complexity-presentation">check the presentation out on Slideshare</a> or grab the <a href="http://therealadam.com/wp-content/uploads/2008/09/iheartcomplexity.pdf">PDF</a>. Also, make sure to <a href="http://github.com/therealadam/i-heart-complexity/tree/master">check out the code on GitHub</a>. Enjoy!</p>
 
@@ -28083,7 +28085,7 @@ You are a bell curve.
 
 		<div class="e-content">
 			 <p>Designing software is a tricky thing. It&rsquo;s tempting to front-load it on a project. That won&rsquo;t work because the start of a project is when you know the least about it. So some folks try to do as little design as possible. I&rsquo;m guilty of this. However, that can lead to software that doesn&rsquo;t adequately express the problem it&rsquo;s trying to solve. Further, there is often a temptation to over-design software with lots of ceremony and architecture. Contrary to this is the temptation to not design it at all, which again leads to software that doesn&rsquo;t express itself.</p>
-<p>There&rsquo;s a book that draws a reasonable compromise between these forces. I&rsquo;ve been meaning to read Eric Evans' <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1218903529&amp;sr=8-1"><em>Domain Driven Design</em></a> for a while now. The emphasis of the book is in collaborating with domain experts and other developers to find the essence of the problem space and then express that in software (as objects). I&rsquo;ve often pointed out the utility of building applications from the language up and the problem domain down. DDD focuses precisely on the latter.</p>
+<p>There&rsquo;s a book that draws a reasonable compromise between these forces. I&rsquo;ve been meaning to read Eric Evans&rsquo; <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1218903529&amp;sr=8-1"><em>Domain Driven Design</em></a> for a while now. The emphasis of the book is in collaborating with domain experts and other developers to find the essence of the problem space and then express that in software (as objects). I&rsquo;ve often pointed out the utility of building applications from the language up and the problem domain down. DDD focuses precisely on the latter.</p>
 <p>One of the core concepts in the book is the <em>ubiquitous language</em> that is used to describe the problem at hand. This language is used by the domain experts (customers) <em>and</em> the developers. The language is then woven into the design of the system. This leads to software that is more likely to succeed, both in business terms and in terms of development effort. Evans spends the first part of the book describing the particulars of this language.</p>
 <p>He then moves on to describing the technical side of the software. Entities, value objects, services, factories, modules and repositories are terms I was already somewhat familiar with that Evans gave a more crisp and satisfying definition to. For most people, this is probably the tasty meat of the book, illuminating the way from a competent developer to an outstanding developer.</p>
 <p>The last part of the book focuses on the larger scale issues of deep design. I was particularly pleased that he covers how software design is affected by various good and bad social issues. It also gives a strategic view of the forest, where most books on software development focus on a more tactical view of each tree.</p>
@@ -28234,7 +28236,7 @@ Io's guiding design principle is simplicity and power through conceptual unifica
 
 		<div class="e-content">
 			 <p>Its retro, its cool. It&rsquo;ll come in handy when I need slides on the sameness of code and data in good programming languages.</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wordpress/wp-content/151691/2008/07/information-programs1.jpg" alt="information_programs.jpg" border="0" width="500" height="330" /></div>
+<div class="center"><img src="http://therealadam.com/wordpress/wp-content/uploads/2008/07/information-programs1.jpg" alt="information_programs.jpg" border="0" width="500" height="330" /></div>
 <p>Via <a href="http://www.squareamerica.com/ib.htm">Square America</a>.</p>
 
 		</div>
@@ -28275,7 +28277,7 @@ Io's guiding design principle is simplicity and power through conceptual unifica
 
 		<div class="e-content">
 			 <p>1940s and 50s industry is neat, OK?</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/07/women-plane.jpg" alt="women_plane.jpg" border="0" width="480" height="388" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2008/07/women-plane.jpg" alt="women_plane.jpg" border="0" width="480" height="388" /></div>
 <p>Via <a href="http://ffffound.com/image/821cdddd2ed881aca7d1eae562e3d817a3816afa">ffffound!</a></p>
 
 		</div>
@@ -28322,7 +28324,7 @@ Io's guiding design principle is simplicity and power through conceptual unifica
 
 		<div class="e-content">
 			 <p>I wouldn&rsquo;t mind living on the water like this.</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/07/ocean-house.jpg" alt="ocean_house.jpg" border="0" width="480" height="322" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2008/07/ocean-house.jpg" alt="ocean_house.jpg" border="0" width="480" height="322" /></div>
 <p>Via <a href="http://ffffound.com/image/140038deb65ab20d0c5b26a265da0d95d3de78d3">ffffound!</a></p>
 
 		</div>
@@ -28403,7 +28405,7 @@ end
 
 		<div class="e-content">
 			 <p>Say it with me. Data. Base. I knew you could!</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/07/database.jpg" alt="database.jpg" border="0" width="500" height="330" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2008/07/database.jpg" alt="database.jpg" border="0" width="500" height="330" /></div>
 <p>Via <a href="http://www.squareamerica.com/ib.htm">Square America</a>.</p>
 
 		</div>
@@ -28431,7 +28433,7 @@ end
 
 		<div class="e-content">
 			 <p>My golf game is hurting these days. Since I&rsquo;ve become so familiar with my shots drifting off to the right, I figured I&rsquo;d finally figure out the correct term for these sorts of shots. Thusly, an illustration to teach myself:</p>
-<div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/07/badswing.jpg" alt="BadSwing.jpg" border="0" width="500" height="647" /></div>
+<div class="center"><img src="http://therealadam.com/wp-content/uploads/2008/07/badswing.jpg" alt="BadSwing.jpg" border="0" width="500" height="647" /></div>
 <p>Handsome penance, isn&rsquo;t it?</p>
 
 		</div>
@@ -28486,7 +28488,7 @@ end
 
 		<div class="e-content">
 			 <p>When I go to speak about Ruby at non-Ruby groups, my go-to schtick is only mildly subversive. Sure, I tell them that Ruby is a fantastic language that will make them a better programmer. But, I don&rsquo;t expect them to switch to Ruby right away. Instead, I lead them down the path of borrowing ideas from Ruby and using them in their day-to-day coding, no matter what language they use.</p>
-<p><a href="http://therealadam.com/wp-content/uploads/2008/07/whathasrubydoneforyoulately.pdf"><div class="center"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/07/whathasrubydoneforyoulately.jpg" alt="WhatHasRubyDoneForYouLately.jpg" border="0" width="500" height="134" /></div></a></p>
+<p><a href="http://therealadam.com/wp-content/uploads/2008/07/whathasrubydoneforyoulately.pdf"><div class="center"><img src="http://therealadam.com/wp-content/uploads/2008/07/whathasrubydoneforyoulately.jpg" alt="WhatHasRubyDoneForYouLately.jpg" border="0" width="500" height="134" /></div></a></p>
 <p>This week at OSCON 2008, I applied the same tact, but I did it on Ruby programmers. See, there are tons of great ideas in languages like Haskell, Io and Erlang. Some translate really well to Ruby and some don&rsquo;t. But they&rsquo;ll all twist your brain around in interesting ways.</p>
 <p>That&rsquo;s the idea. Here are the goods: <a href="http://therealadam.com/wp-content/uploads/2008/07/whathasrubydoneforyoulately.pdf">just the slides</a>, <a href="http://therealadam.com/wordpress/wp-content/uploads/2008/07/whathasrubydoneforyoulately.zip">the code and the slides</a>. Enjoy!</p>
 
@@ -28515,7 +28517,7 @@ end
 		<a href="https://therealadam.com/2008/07/25/more-modules-please.html" class="u-url"><time class="dt-published" datetime="2008-07-25 09:28:28 -0700">Jul 25, 2008</time></a>
 
 		<div class="e-content">
-			 <p><a href="http://blog.jayfields.com/2008/07/ruby-underuse-of-modules.html">Jay Fields' Thoughts: Ruby: Underuse of Modules</a>. Modules are your best friend, ya&rsquo;ll. Use &lsquo;em.</p>
+			 <p><a href="http://blog.jayfields.com/2008/07/ruby-underuse-of-modules.html">Jay Fields&rsquo; Thoughts: Ruby: Underuse of Modules</a>. Modules are your best friend, ya&rsquo;ll. Use &rsquo;em.</p>
 
 		</div>
 	  </div>
@@ -28739,7 +28741,7 @@ end
 
 		<div class="e-content">
 			 <div class="center">
-<a href="http://therealadam.muxtape.com/"><img src="https://cdn.uploads.micro.blog/wp-content/151691/2008/05/therealadam-muxtape-com-1.jpg" alt="therealadam.muxtape.com-1.jpg" border="0" width="603" height="47" />
+<a href="http://therealadam.muxtape.com/"><img src="http://therealadam.com/wp-content/uploads/2008/05/therealadam-muxtape-com-1.jpg" alt="therealadam.muxtape.com-1.jpg" border="0" width="603" height="47" />
 </a>
 </div>
 <p>I hope you enjoy listening to it as much as I enjoyed compiling it.</p>
@@ -29468,7 +29470,7 @@ code reality
 
 		<div class="e-content">
 			 <p>I&rsquo;ve been doing &ldquo;very detailed&rdquo; research on the correlation between the time it takes to get hot water in public bathroom sinks and affluence. Signs point to a strong correlation between the two. Shocking, I know!</p>
-<p><a href="http://www.microsoft.com/">Microsoft</a> and <a href="http://www.austinventures.com/">Austin Ventures'</a> buildings have almost instant hot water. Generic office buildings take a while.  My bathroom at home: 60 seconds of astonishingly cold water.</p>
+<p><a href="http://www.microsoft.com/">Microsoft</a> and <a href="http://www.austinventures.com/">Austin Ventures&rsquo;</a> buildings have almost instant hot water. Generic office buildings take a while.  My bathroom at home: 60 seconds of astonishingly cold water.</p>
 
 		</div>
 	  </div>
@@ -29605,7 +29607,7 @@ code reality
 
 		<div class="e-content">
 			 <p>Tonight I gave a presentation on Rails 2 at <a href="http://dallasrb.org">Dallas.rb</a>. Within, I note some of my favorite new things in Rails 2. Some things small, some things large.</p>
-<img src="https://therealadam-ng.micro.blog/uploads/2024/7a42e04717.jpg" width="432" height="138" alt="">
+<img src="uploads/2024/7a42e04717.jpg" width="432" height="138" alt="">
 <p>If you weren&rsquo;t there, I should probably explain a couple of the slides. I think Rails 2 is, despite its whole-numberness, an evolutionary release. It makes the Rails &ldquo;language&rdquo; smoother around the edges. Granted, its still somewhat blob-esque, but its getter rounder. I dig it.</p>
 <p>Besides that, I think Active Resource, or ARes as they call it in the biz, is going to prove useful mostly behind the firewall in your datacenter. As you build more and more applications, you&rsquo;ll find you need to use resources across multiple apps. This is exactly where ARes shines &ndash; providing a common user service, for example.</p>
 <p><s>You can download <a href="http://therealadam.com/wp-content/uploads/2008/02/ilikerails2.pdf" title="I Like Rails 2">I Like Rails 2</a> it if you missed it or, for some reason I can&rsquo;t even fathom, aren&rsquo;t even in Dallas.</s></p>
@@ -29645,7 +29647,7 @@ code reality
 <div style="text-align:center;">
   <img src="http://farm3.static.flickr.com/2033/2234495711_502a1b0f46_d.jpg" alt="The Mint Logo with interesting annotation">
 </div>
-<p>Frickin' genius.</p>
+<p>Frickin&rsquo; genius.</p>
 <p><em>Ed. revised Feb 15, 2025. No notes.</em></p>
 
 		</div>
@@ -30060,7 +30062,7 @@ end tell
 </blockquote>
 <p>Alex The Parrot was adopted by a scientist who wasn&rsquo;t, at the time, involved in linguistics.  But, in teaching Alex to speak, she ended up teaching him things like counting and basic recognition of objects.  Over the years, this evolved into all manners of experiments on what kind of cognition Alex was capable of.</p>
 <blockquote>
-<p>By the end, said Dr Pepperberg, Alex had the intelligence of a five-year-old child and had not reached his full potential. He had a vocabulary of 150 words. He knew the names of 50 objects and could, in addition, describe their colours, shapes and the materials they were made from. He could answer questions about objects' properties, even when he had not seen that particular combination of properties before. He could ask for things - and would reject a proffered item and ask again if it was not what he wanted. He understood, and could discuss, the concepts of &ldquo;bigger&rdquo;, &ldquo;smaller&rdquo;, &ldquo;same&rdquo; and &ldquo;different&rdquo;. And he could count up to six, including the number zero (and was grappling with the concept of &ldquo;seven&rdquo; when he died). He even knew when and how to apologise if he annoyed Dr Pepperberg or her collaborators.</p>
+<p>By the end, said Dr Pepperberg, Alex had the intelligence of a five-year-old child and had not reached his full potential. He had a vocabulary of 150 words. He knew the names of 50 objects and could, in addition, describe their colours, shapes and the materials they were made from. He could answer questions about objects&rsquo; properties, even when he had not seen that particular combination of properties before. He could ask for things - and would reject a proffered item and ask again if it was not what he wanted. He understood, and could discuss, the concepts of &ldquo;bigger&rdquo;, &ldquo;smaller&rdquo;, &ldquo;same&rdquo; and &ldquo;different&rdquo;. And he could count up to six, including the number zero (and was grappling with the concept of &ldquo;seven&rdquo; when he died). He even knew when and how to apologise if he annoyed Dr Pepperberg or her collaborators.</p>
 </blockquote>
 <p>Animals are just amazing.</p>
 
@@ -30089,8 +30091,8 @@ end tell
 		<a href="https://therealadam.com/2007/10/08/making-sense-of.html" class="u-url"><time class="dt-published" datetime="2007-10-08 06:14:05 -0700">Oct 8, 2007</time></a>
 
 		<div class="e-content">
-			 <p>Particle Tree has an <a href="http://particletree.com/features/visualizing-fittss-law/">excellent article on Fitts' Law</a>.  That&rsquo;s the one tells designers to put the Dock and Start Menu on the edges of the screen.  You definitely want to check it out, if only for the terrific images used as demonstration.</p>
-<p>Of course, if you&rsquo;re more about the math (bad news, UI design is <em>a lot</em> of math) you could read up on <a href="http://en.wikipedia.org/wiki/Fitts'_law">Fitts' Law on Wikipedia</a>.</p>
+			 <p>Particle Tree has an <a href="http://particletree.com/features/visualizing-fittss-law/">excellent article on Fitts&rsquo; Law</a>.  That&rsquo;s the one tells designers to put the Dock and Start Menu on the edges of the screen.  You definitely want to check it out, if only for the terrific images used as demonstration.</p>
+<p>Of course, if you&rsquo;re more about the math (bad news, UI design is <em>a lot</em> of math) you could read up on <a href="http://en.wikipedia.org/wiki/Fitts'_law">Fitts&rsquo; Law on Wikipedia</a>.</p>
 
 		</div>
 	  </div>
