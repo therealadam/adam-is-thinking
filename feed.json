@@ -7,6 +7,15 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/09/22/the-big-blur-brian-bailey.html",
+				
+				"content_html": "<p><a href=\"https://world.hey.com/bb/the-big-blur-db2a8afe\">The big blur</a> – Brian Bailey nailed it. Wish I’d thought of this framing.</p>\n<blockquote>\n<p>We’re living through the big blur. Product, design, engineering, mobile, web, QA. Roles are fluid. Previously clear lines now fade at the edges like lines in an Agnes Martin painting.</p>\n</blockquote>\n<p>I’ll yes-and this and add that not only are roles and activities blurring, but time is as well. A day spent discussing code in reviews, grilling a feature with an agent, steering another agent to focus on what’s important, keeping projects on track, providing feedback, and monitoring Slack channels leaves the brain feeling like a page full of great ideas all smudged out by the wet hands of an automaton toddler.</p>\n",
+				"content_text": "[The big blur](https://world.hey.com/bb/the-big-blur-db2a8afe) – Brian Bailey nailed it. Wish I’d thought of this framing.\n\n> We’re living through the big blur. Product, design, engineering, mobile, web, QA. Roles are fluid. Previously clear lines now fade at the edges like lines in an Agnes Martin painting.\n\nI’ll yes-and this and add that not only are roles and activities blurring, but time is as well. A day spent discussing code in reviews, grilling a feature with an agent, steering another agent to focus on what’s important, keeping projects on track, providing feedback, and monitoring Slack channels leaves the brain feeling like a page full of great ideas all smudged out by the wet hands of an automaton toddler.\n\n",
+				"date_published": "2026-09-22T18:54:41-07:00",
+				"url": "https://therealadam.com/2026/09/22/the-big-blur-brian-bailey.html",
+				"tags": ["Links"]
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/09/17/once-more-with-feeling-another.html",
 				
 				"content_html": "<p><a href=\"https://buttondown.com/therealadam/archive/once-more-with-feeling/\">Once more, with feeling</a> – another season, another newsletter. Trying to get a conceptual hold on how to <em>feel human</em> in this continually liminal time in software and technology. Current hypothesis: maybe thinking slowly and holistically, whilst acting quickly, is worth exploring.</p>\n<blockquote>\n<p>We continue to feel all sorts of ways about machines generating code, writing on the web, composing images, deciding things that humans used to decide. Robots continue to feel nothing. I bet you can see the problem here.</p>\n</blockquote>\n",
