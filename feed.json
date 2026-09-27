@@ -7,6 +7,15 @@
 	"items": [
 		
 			{
+				"id": "http://therealadam-ng.micro.blog/2026/09/26/a-weekend-in-carmel-ca.html",
+				"title": "A weekend in Carmel, CA",
+				"content_html": "<p><img src=\"https://therealadam.com/uploads/2026/draggedimage.jpg\" alt=\"\"></p>\n<p><img src=\"https://therealadam.com/uploads/2026/draggedimage-1.jpg\" alt=\"\"></p>\n<p><img src=\"https://therealadam.com/uploads/2026/draggedimage-2.jpg\" alt=\"\"></p>\n<p><img src=\"https://therealadam.com/uploads/2026/draggedimage-3.jpg\" alt=\"\"></p>\n",
+				"content_text": "![](https://therealadam.com/uploads/2026/draggedimage.jpg)\n\n![](https://therealadam.com/uploads/2026/draggedimage-1.jpg)\n\n![](https://therealadam.com/uploads/2026/draggedimage-2.jpg)\n\n![](https://therealadam.com/uploads/2026/draggedimage-3.jpg)\n\n\n",
+				"date_published": "2026-09-26T22:01:07-07:00",
+				"url": "https://therealadam.com/2026/09/26/a-weekend-in-carmel-ca.html",
+				"tags": ["Travels"]
+			},
+			{
 				"id": "http://therealadam-ng.micro.blog/2026/09/22/the-big-blur-brian-bailey.html",
 				
 				"content_html": "<p><a href=\"https://world.hey.com/bb/the-big-blur-db2a8afe\">The big blur</a> – Brian Bailey nailed it. Wish I’d thought of this framing.</p>\n<blockquote>\n<p>We’re living through the big blur. Product, design, engineering, mobile, web, QA. Roles are fluid. Previously clear lines now fade at the edges like lines in an Agnes Martin painting.</p>\n</blockquote>\n<p>I’ll yes-and this and add that not only are roles and activities blurring, but time is as well. A day spent discussing code in reviews, grilling a feature with an agent, steering another agent to focus on what’s important, keeping projects on track, providing feedback, and monitoring Slack channels leaves the brain feeling like a page full of great ideas all smudged out by the wet hands of an automaton toddler.</p>\n",
