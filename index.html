@@ -25,6 +25,56 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://therealadam.com/2026/10/28/im-trying-to-play-fewer.html" class="u-url"><time class="dt-published" datetime="2026-10-28 07:57:32 -0700">Oct 28, 2026</time></a>
+
+		<div class="e-content">
+			 <p>🕹️ I’m trying to play fewer open-ended video games. I <em>should</em> select games that are designed for some idea of finishing and reaching a satisfying ending. But, <a href="https://www.marathonthegame.com"><em>Marathon</em></a> and its (open-ended) skill-climb is often compelling. Possibly, I will never <em>not</em> play an activer Bungie game. Which works out, since it seems like their future is on the fence.</p>
+<p>I need more close-ended, finish it, and you’re <em>done</em> games. Or, to replace gaming with something more fruitful and becoming of a grown man. I could be pretty good at a lot of things if I’d spend the dozens and hundreds of gaming hours at other hobbies. 🤷‍♂️</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+			<h1><a href="https://therealadam.com/2026/10/25/things-one-might-think-about.html">Things one might think about coding agents</a></h1>
+		
+
+		<a href="https://therealadam.com/2026/10/25/things-one-might-think-about.html" class="u-url"><time class="dt-published" datetime="2026-10-25 17:58:33 -0700">Oct 25, 2026</time></a>
+
+		<div class="e-content">
+			 <p>Things were widely discussed, ideas were shared, I was convinced. Later, I read more opinions and experience reports, and I was convinced otherwise!</p>
+<p>The discourse is sometimes wrong, no matter how intuitively right it seems. Superficial isn’t super-right.</p>
+<h2 id="anthropic-openai-etc-intentionally-weaken-their-product">Anthropic, OpenAI, etc. intentionally weaken their product</h2>
+<p>If you find yourself thinking, “are the models worse today?”, it’s possibly time to step back and look at how you’re using them. Which is not to say it’s a “skill issue”. More likely, your setup has drifted away from how the models are trained to work within their harnesses.</p>
+<p>The models (probably) don’t vary much day to day, inference and harness bugs aside. You likely want to reduce the size of your prompts, skills, and <code>CLAUDE/AGENTS.md</code>. Let the agent do its thing without oversteering and verbal micromanagement.</p>
+<p>That said, the frontier labs have been known to vibe code rigorously evaluate and release code changes which result in elaborate bugs that have generated worse results, poor reliability, increased costs, and/or all of the above. Sometimes, you gotta look at the status page and see if the carnage is on their end or yours. I do not like this subtle gaslighting-adjacent quality of coding agents, but seems like we’re stuck with it until the labs compete on robustness.</p>
+<h2 id="the-big-labs-are-diluting-their-models-for-operationalperformance-reasons">The big labs are diluting their models for operational/performance reasons</h2>
+<p>This is a restatement of the previous one in the context of the next one.</p>
+<p>There are a bunch of compelling stories that might make you think the labs are intentionally diluting their models. Because they’re afraid of Mythos’ capabilities or OpenAI’s models escaping containment. For operational expense reasons like reducing cost of inference. Because they’re just dishonest, pathological liars.</p>
+<p>It is again, unfortunately, more likely that human error, and human error magnified by coding agent support, are interacting in ways that make it seem like the models are consistently worse than they were last week or last month. But really, it’s good old-fashioned bugs compounding to the extent they plausibly resemble malice.</p>
+<h2 id="ai-is-toast-once-the-subsidies-vc-money-runs-out">AI is toast once the subsidies (VC money) runs out</h2>
+<p>We should enjoy the discounted token party while it lasts, right? Hence, all the double-usage weekends and “xyz model is available on all plans for the next several days” promotions.</p>
+<p>I’ve come around to the mental model that reduced token cost is merely one lever in a sophisticated pricing model and subscriber retention strategy. I’m of the mind that the token party will probably continue, if you don’t mind hitting a usage limit every once in a while.</p>
+<p>That said, the labs increasingly charge per-token consumption pricing of more customers and use cases. If token subsidies are important to you, get good at using first-party CLIs like Claude Code. This is currently true for Anthropic and their incremental but obvious restriction of how subscribers can use their tokens. Seems inevitable that other agent vendors (OpenAI, Cursor) might go this way, despite the good will they’re accumulating right now in not doing so.</p>
+<h2 id="ill-just-tell-the-coding-agent-to-never-ever-do-the-extremely-bad-thing">I’ll just tell the coding agent to never, ever do the Extremely Bad Thing</h2>
+<p>Determinism is (still) a thing you can only get by writing helper scripts in a deterministic language. Or, by trusting that the little box you’ve put your agent into really impermeable. (Which it seems isn’t even true for the most clever of laboratories.)</p>
+<p>Apparently, there’s a magic word, “gates”, that matches the domain language of machine learning to invoke guardrails. I’m not sure how effective it is. Eventually, even text like “you must never get the gremlins wet” is just another bag of floating-point numbers to the model. They’ll eventually get the math wrong.</p>
+<h2 id="i-will-never-learn-a-new-thing-again">I will never learn a new thing again</h2>
+<p>Sounds like a personal choice to me.</p>
+<p>Granted, this is a bit of a straw-man argument. The stronger form of this argument gets back to the essence of what software development, creative work, and many kinds of knowledge work really are: problem-solving searching for an outcome that your team has decided upon.</p>
+<p>The puzzles solved along the way are often means and not the end. For a lot of us, there’s pride in knowing the solution to the old puzzles and bringing those ideas to bear against new puzzles. Working with AI bypasses the rote application, and that will always jostle some feathers.</p>
+<p>That doesn’t mean an agent can’t help one learn to solve new puzzles or fit that knowledge into the gaps in your experience. Ask the agent to help you <em>learn</em> how to solve/write the thing. Instead of just writing the thing for you and worrying about skill atrophy. Or, ask it to help you get started and remind you about the syntax or functions to use.</p>
+<p>The little gizmos are pretty good at putting together explanations. At checking them for hallucinations against what a database query, or linter, or a web search, actually say about an assertion. At putting that all together as a haiku, sonnet, or graphic novel.</p>
+<p>Now is the time to either celebrate you never really figured out the syntax for shell scripting, with all its fiddly sigils, or ask an agent to make a bespoke tutorial for you to finally learn shell scripting and all its spooky action at a distance.</p>
+<p>Will I solve the same kind of puzzles I did before? Possibly not. Will I solve problems as a craftsperson of expressing yourselves to computers and people? Probably not.</p>
+<p>Am I going to learn things? Only as much as I want to. (Which is quite a bit.)</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://therealadam.com/2026/10/23/watched-slow-horses-season-the.html" class="u-url"><time class="dt-published" datetime="2026-10-23 14:48:12 -0700">Oct 23, 2026</time></a>
 
 		<div class="e-content">
@@ -9539,9 +9589,9 @@ A cozy development environment making prototyping and scripting as easy as possi
 <p>Regardless of how we arrive at it, we can only write one answer. This leaves the door open for us to <em>have</em> the right answer, but <em>write down</em> the wrong answer. Little indignations in jest. We are a bit competitive.</p>
 <h2 id="enter-the-flipping-table">Enter the flipping table</h2>
 <p>Possibly, you’ve seen the table-flip “emoji”: (┛◉Д◉)┛彡┻━┻. It’s a shorthand for “this makes me have a big, not-good feeling” in online conversation. If not, here’s the late, great Alan Rickman “performing it”:</p>
-<p><img src="https://therealadam.com/uploads/2026/audit-e54db73228.gif" alt="Alan Rickman turning a table over"></p>
+<p><img src="https://cdn.uploads.micro.blog/151691/2026/audit-e54db73228.gif" alt="Alan Rickman turning a table over"></p>
 <p>That’s how it feels when you suggested the right answer and your quiz team went with the wrong answer anyway. <em>Actually</em> flipping tables would get us kicked out and banned from the venues we frequent, so that’s not an option. However, it happens, tables come in <em>all</em> sizes. Including, very tiny simulacrum of tables.</p>
-<p><img src="https://therealadam.com/uploads/2026/audit-c563494c9f.png" alt="This is a toy, not an actual dining set"></p>
+<p><img src="https://cdn.uploads.micro.blog/151691/2026/audit-c563494c9f.png" alt="This is a toy, not an actual dining set"></p>
 <p>So one night after quiz, I scoured the internet for tiny tables that we could flip. Once I dialed in the search (there are many ways to search for “toy table” on Amazon that will not yield tables that are toys or tables that are flippable amongst polite company), a table was ordered. A few days later, thanks to the magic of just-in-time supply chain logistics<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, we had a toy table. So it came that every night, as we were preparing for the quiz, we set out our little (toy) table on top of the (actual) table in case there was a moment of indignation.</p>
 <h2 id="our-reputation-precedes-us">Our reputation precedes us</h2>
 <p>Turns out, flipping a tiny table with your finger is pretty cathartic. The tiny table got a lot of use. We really liked our tiny table.</p>
